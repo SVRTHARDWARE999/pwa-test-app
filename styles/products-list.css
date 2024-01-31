@@ -42,19 +42,18 @@ a:link{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    line-height: 1.5em;
+    line-height: 1.3em;
     overflow: hidden;
     text-transform: uppercase;
-    font-family: arial,sans-serif;
+    font-family: goldman , arial,sans-serif;
     font-size: 1em;
-    font-weight: lighter;
+    font-weight: 50;
     padding: 0% 0.5% 0% 0%;
 }
 .container b p{
     font-size: 1em;
-    font-family:arial,sans-serif;
-    font-weight: lighter;
-    color: rgba(0, 0, 0, 0.418);
+    font-family: roboto , arial,sans-serif;
+    font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
     display: inline;
