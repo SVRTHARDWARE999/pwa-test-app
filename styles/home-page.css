@@ -285,46 +285,46 @@ div#goog-gt-tt{
 
 @font-face{
     font-family: "roboto";
-    src: url(/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+    src: url(fonts/Roboto/Roboto-Regular.ttf) format('truetype');
 
 }
 @font-face{
     font-family: "monoto";
-    src: url(/fonts/Monoton/Monoton-Regular.ttf) format('truetype');
+    src: url(fonts/Monoton/Monoton-Regular.ttf) format('truetype');
 
 }
 @font-face{
     font-family: "roblox";
-    src: url(/fonts/roblox/Roblox\ Font\ Regular.ttf) format('truetype');
+    src: url(fonts/roblox/Roblox\ Font\ Regular.ttf) format('truetype');
 
 }
 @font-face{
     font-family: "goldman";
-    src: url(/fonts/Goldman/Goldman-Regular.ttf) format('truetype');
+    src: url(fonts/Goldman/Goldman-Regular.ttf) format('truetype');
 
 }
 @font-face{
     font-family: "faster";
-    src: url(/fonts/Faster_One/FasterOne-Regular.ttf) format('truetype');
+    src: url(fonts/Faster_One/FasterOne-Regular.ttf) format('truetype');
 
 }
 @font-face{
     font-family: "chathura";
-    src: url(/fonts/telugu/chathura-bold/Chathura.ttf) format('truetype');
+    src: url(fonts/telugu/chathura-bold/Chathura.ttf) format('truetype');
 }
 @font-face{
     font-family: "lohiti";
-    src: url(/fonts/telugu/lohit-telugu-regular/Lohit.ttf) format('truetype');
+    src: url(fonts/telugu/lohit-telugu-regular/Lohit.ttf) format('truetype');
 
 }
 @font-face{
     font-family: "nandakam";
-    src: url(/fonts/telugu/nandakam-regular/Nandakam.otf) format('opentype');
+    src: url(fonts/telugu/nandakam-regular/Nandakam.otf) format('opentype');
 
 }
 @font-face{
     font-family: "potti-sreeramulu";
-    src: url(/fonts/telugu/potti-sreeramulu-regular/Potti-Sreeramulu.otf) format('opentype');
+    src: url(fonts/telugu/potti-sreeramulu-regular/Potti-Sreeramulu.otf) format('opentype');
     font-size: 7vw;
 
 }
