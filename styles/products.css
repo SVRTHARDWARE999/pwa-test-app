@@ -43,6 +43,7 @@ a{
     font-family:roboto;
     font-size: 4.1vw;
     line-height: 1.3em;
+    font-weight: 400;
     word-spacing: 0.1vw;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -139,7 +140,7 @@ a{
     align-items: center;
     align-self: center;
     position: relative;
-    padding: 0 0 2% 0;
+    padding: 1% 0 0% 0;
     justify-content: space-between;
 }
 .rating-container button{
