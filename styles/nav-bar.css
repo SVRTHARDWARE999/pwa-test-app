@@ -1,0 +1,351 @@
+/*---------------- nav bar style ---------*/
+nav{
+    width: auto;
+    height: auto;
+    color: white;
+    display: grid;
+    position: sticky;
+    grid-template-columns: 75% 25%;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 3% 0% 3% 1%;
+    top: 0;
+    z-index: 9;
+    font-size: 8vw;
+    border-bottom: 1vw solid #ff9864;
+    background-color: #010a25;
+}
+.navigation{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0%;
+    z-index: 9;
+}
+nav img{
+    width:7vw;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    margin: 0% 1% 0 1%;
+}
+nav label{
+    font-family: Goldman;
+    font-size: 7vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+}
+nav li:hover{
+    color: #ff9864;
+}
+nav label:hover{
+    color: #ff9864;
+}
+nav :last-child{
+    word-spacing: 0.2em;
+}
+nav :last-child :hover{
+    color: #ff9864;
+}
+/*--------- Menu Style --------------*/
+.my-menu{
+width: 0;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-content: center;
+background:rgb(255, 255, 255);
+left: 0;
+top: 0;
+position: fixed;
+transition:ease-in-out  0.15s;
+transition-property: width;
+z-index: 9;
+overflow-x: hidden;
+}
+.my-menu::-webkit-scrollbar{
+    scroll-behavior: smooth;
+}
+.my-menu a{
+    font-family: roboto;
+    font-size: 6.5vw;
+    display: flex;
+    color: rgb(93, 93, 93);
+    align-items: center;
+    padding: 2% 0% 0% 2%;
+    margin-bottom: 2%
+}
+.my-menu a:hover, .my-menu details:hover{
+    color: #010a25;
+}
+.my-menu details{
+    width: 100%;
+    height: auto;
+    padding: 2% 0% 0% 2%;
+    margin-bottom: 2.5%;
+    font-family: roboto;
+    color: rgb(93, 93, 93);
+    font-size: 7vw;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-transform: capitalize;
+}
+.my-menu details[open] summary ~ *{
+    animation: sweep .5s ease-in-out;
+    transition: toleft 0.5s;
+}
+@keyframes sweep{
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+}
+.my-menu details button{
+    width: 98%;
+    text-align: center;
+    font-size: 6vw;
+    list-style: none;
+    top: 0;
+    color: rgb(93, 93, 93);
+    position: relative;
+    background:none ;
+    margin-top: 2%;
+    border: none;
+    outline: none;
+}
+.my-menu details button:hover{
+    color: #010a25;
+}
+.my-menu img:last-child{
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-top:1vw solid #d89000;
+    transition:ease-in-out  0.15s;
+}
+#overlay{
+    width: 0%;
+    height: 100%;
+    top: 0;
+    display: block;
+    position: fixed;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.39);
+    transition:fadebackground 10s;
+    transition-property: background;
+}
+#overlay-close{
+    width: 13.5%;
+    height: 100%;
+    float: right;
+    padding: 5% 10% 0% 0%;
+    opacity: 0.5;
+}
+#menu-header{
+    display: flex;
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    border-bottom:1vw solid #d89000;
+}
+#menu-header button{
+    width: 50%;
+    height: auto;
+    font-family: goldman;
+    font-size: 4.5vw;
+    padding: 4% 0% 4% 0%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: #ffe6b3;
+}
+#menu-header button:hover{
+    color: #9e3601;
+}
+#chatBtn{
+width: 6vw;
+height: auto;
+border: none;
+background: none;
+margin-left: 33%;
+margin-right: 3%;
+position: relative;
+padding-top: 2vw;
+}
+.my-menu::-webkit-scrollbar{
+display: none;
+}
+/* -------------------------search header style--------------------------- */
+#search-header{
+    width: 100%;
+    height:auto;
+    top: -50%;
+    position: fixed;
+    transition:top 0.4s;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1% 1% 1.5% 1%;
+    z-index: 9;
+    background-color: rgb(255,230,179);
+    border-bottom: 1vw solid #d89000;
+
+}
+#searchbar-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    z-index: 9;
+}
+#searchbar-container #search-input{
+    width: 73%;
+    display: inline-block;
+    position: sticky;
+    direction: ltr;
+    border: 1px solid black;
+    border-right: none;
+    outline: none;
+    line-height: 1.5em;
+    padding: 3%;
+    border-radius: 0.3em 0em 0em 0.3em;
+    font-family: roboto;
+    font-size: 1em;
+    box-sizing: border-box;
+    text-transform: lowercase;
+}
+#search-input{
+    text-transform: lowercase;
+    color: #9e3601;
+}
+#searchbar-container button{
+    width: 15vw;
+    height: auto;
+    position: sticky;
+    display: inline-block;
+    padding: 3%;
+    line-height: 1.5em;
+    font-family: roboto;
+    color: black;
+    background-color: rgb(255, 213, 129);
+    border:1px solid black;
+    border-radius: 0em 0.3em 0.3em 0em;
+    border-left: none;
+    font-size: 1em;
+    font-weight: bold;
+    box-sizing: border-box;
+
+}
+#searchbar-container button :hover{
+    color: #9e3601;
+}
+#searchbar-container> a{
+    font-size:8vw;
+    padding: 1%;
+    font-family: arial,sans-serif;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    font-size: 4.5vw;
+    width: 100%;
+    height: auto;
+    background-color: #ffe6b3;
+    position: fixed;
+    z-index: 9;
+    top:11vw;
+    font-family: arial , sans-serif;
+}
+.list {
+width: 100%;
+height: auto;
+}
+.list-items {
+padding: 2% 0 2% 0;
+}
+.list-items:hover {
+color: #9e3601;
+}
+
+/* ---------------------------------footer style------------------ */
+
+.footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0% !important;
+    background: #010a25;
+    border-top: solid #cc8800 1.3vw;
+}
+footer{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 7vw;
+    color:#ff9864;
+    font-family: goldman;
+}
+footer img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 3%;
+}
+
+/* -------------------------------- fonts ----------------------- */
+
+@font-face{
+    font-family: "roboto";
+    src: url(/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+
+}
+@font-face{
+    font-family: "monoto";
+    src: url(/fonts/Monoton/Monoton-Regular.ttf) format('truetype');
+
+}
+@font-face{
+    font-family: "roblox";
+    src: url(/fonts/roblox/Roblox\ Font\ Regular.ttf) format('truetype');
+
+}
+@font-face{
+    font-family: "goldman";
+    src: url(/fonts/Goldman/Goldman-Regular.ttf) format('truetype');
+
+}
+@font-face{
+    font-family: "faster";
+    src: url(/fonts/Faster_One/FasterOne-Regular.ttf) format('truetype');
+
+}
+@font-face{
+    font-family: "chathura";
+    src: url(/fonts/telugu/chathura-bold/Chathura.ttf) format('truetype');
+}
+@font-face{
+    font-family: "lohiti";
+    src: url(/fonts/telugu/lohit-telugu-regular/Lohit.ttf) format('truetype');
+
+}
+@font-face{
+    font-family: "nandakam";
+    src: url(/fonts/telugu/nandakam-regular/Nandakam.otf) format('opentype');
+
+}
+@font-face{
+    font-family: "potti-sreeramulu";
+    src: url(/fonts/telugu/potti-sreeramulu-regular/Potti-Sreeramulu.otf) format('opentype');
+    font-size: 7vw;
+
+}

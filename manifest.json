@@ -1,0 +1,81 @@
+{
+    "short_name": "SVRT Hardware",
+    "name": "SVRT HARDWARE",
+    "icons": [
+      {
+        "src": "/app-icons/icon-512-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/app-icons/icon-192-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/app-icons/icon-144-144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "/app-icons/icon-96-96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "/app-icons/icon-72-72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "/app-icons/icon-48-48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      }
+    ],
+    "start_url": "/index.html",
+    "scope":"/",
+    "theme":"#ffffff",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "orientation":"portrait-primary",
+    "display": "standalone",
+    "shortcuts": [
+      {
+        "name": "Shortcut 1",
+        "short_name": "Fallback",
+        "description": "View the Fallback",
+        "url": "/fallback.html",
+        "icons": [{ "src": "/assets/icon-192.png", "sizes": "192x192" }]
+      },
+      {
+        "name": "shortcut 2",
+        "short_name": "Visit Store",
+        "description": "Visit Store",
+        "url": "/visit-store.html",
+        "icons": [{ "src": "/assets/icon-192.png", "sizes": "192x192" }]
+      },
+      {
+        "name": "shortcut 3",
+        "short_name": "Contact Us",
+        "description": "View the Contact Us",
+        "url": "/contact-us.html",
+        "icons": [{ "src": "/assets/icon-192.png", "sizes": "192x192" }]
+      },
+      {
+        "name": "shortcut 4",
+        "short_name": "Home",
+        "description": "View the Home",
+        "url": "/index.html",
+        "icons": [{ "src": "/assets/icon-192.png", "sizes": "192x192" }]
+      }
+    ],
+    "url_handlers": [
+      {
+        "origin": "https://coms.svrthardware.com"
+      },
+      {
+        "origin": "https://*.svrthardware.com"
+      }
+    ]
+}

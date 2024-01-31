@@ -1,0 +1,20 @@
+{
+    "short_name": "SVRT Hardware",
+    "name": "SVRT HARDWARE",
+    "icons": [
+      {
+        "src": "/assets/svrt-logo.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/svrt-logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#ff0000",
+    "display": "standalone",
+    "theme_color": "#ff0000"
+  }

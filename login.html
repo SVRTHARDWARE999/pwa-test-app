@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<link rel="manifest" href="manifest.json">
+	<script>
+		//if browser support service worker
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js');
+		};
+	</script>
+	<title translate="no">Login</title>
+	<link href="" rel="canonical" />
+    <link rel="stylesheet" href="/styles/fonts awesome/css/all.css" />
+    <link rel="stylesheet" href="/styles/fonts awesome/css/fontawesome.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/java scripts/page loader/page-loader-jquary.min.js"></script>
+    <script src="/java scripts/page loader/pageloader-timeout.js"></script>
+    <script src="/java scripts/disable-long-press.js"></script>
+    <link rel="stylesheet" href="/styles/page-loader.css">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="assets/svrt-logo.png" />
+	<meta name="viewport" content= "width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="author" content="KRISH | SOFTWARE ENGINEER" />
+	<meta name="keywords" content="SVRT, HARDWARE , HOUSE , HOME , HOLD , ARTICALS , ARTICELS , WHOLESALE , RETAIL , MANUFACTURING , AGENT , AP , TELENGANA , KERALA , TAMILNADU , GOA , SOUTH , INDIA" />
+	<meta name="description" content="SVRT HARDWARE Manufacturing agent of all types of hardware items for your home.Available all types of household articals of your construction need's.Visit our website now." />
+	<meta name="theme-color" content="#33cccc"/>
+    <meta property="og:title" content="SVRT HARDWARE.com AP largest wholesale store available all types of home & bath accessories"/>
+	<mata property="og:description" content="Shop no 25 & 26 / 1st floor new klr market / onetown / vijayawada / ap / india" />
+	<meta property="og:url" content="https://coms.svrthardware.com/" />
+    <meta property="og:type" content="website"/>
+    <meta property="fb:app_id" content="375110101089943">
+    <meta property="og:image" content="https://coms.svrthardware.com/share-images/fb-share/fb-og.jpg" />
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:image" content="https://dsm01pap002files.storage.live.com/y4m7geYpvznjPZh142qGQaa_nL33D4lL3aKH_d2hVp4onqvUZA6_0Hytjv0qCZaASmFvQ14PyENXTICLeokyHmx_J92_CbrWu7a467sFBRt2MREgvIT_j4-a4CbAv2LHAOxEaJ75lI4ntBzicZRLTTlaRy3Mh3MoYEi15p3SYSrvQ0FQjV5BLgWfW3fcvpPZnFY?width=3024&height=3024&cropmode=none" />
+	<meta property="og:image:width" content="500"/>
+	<meta property="og:image:height" content="500"/>
+	
+	
+ </head>
+    <body>
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+
+        <div class="container">
+            <div class="login-container">
+                <form action="" method="post" id="login-form">
+                        <img src="https://w7.pngwing.com/pngs/713/762/png-transparent-computer-icons-button-login-image-file-formats-logo-monochrome.png" />
+                      <label for="uname"><b><i class="fa-solid fa-phone"></i> Mobile Number</b></label>
+                      <input type="number" placeholder="Enter Registered mobile number" name="username" id="username-field" maxlength="10" required>
+                  
+                      <label for="psw"><b><i class="fa-solid fa-key"></i> Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="password" id="password-field" required>
+                          
+                      <button type="submit" value="Login" id="login-form-submit">Login</button>
+                  </form>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
+   <style>
+    body{
+        margin: auto;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        overflow: hidden;
+    }
+    :root{
+        --theme-color: linear-gradient(to bottom, #33cccc 35%, #0099ff 100%);
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #33cccc 35%, #0099ff 100%);
+    }
+    .login-container{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    form{
+        width: 100%;
+        height: auto;
+        font-family: roboto;
+        line-height: 1.5em;
+        position: relative;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    form img{
+        width: 45%;
+        height: auto;
+        position: relative;
+        mix-blend-mode: multiply;
+        border-radius: 100px;
+        justify-self: center;
+        padding-bottom: 5%;
+    }
+    form input{
+        width: 88%;
+        height: auto;
+        outline: none;
+        margin: 2%;
+        border: 2px solid #000;
+        border-radius: 2vw;
+        padding: 3%;
+        display: inline-block;
+    }
+    form button{
+        width: 95%;
+        padding: 3%;
+        top: 5%;
+        font-weight: bold;
+        font-size: 7vw;
+        color: azure;
+        align-self: center;
+        border-radius: 100px;
+        border: 2px solid #eaeded;
+        background: #000;
+        outline: none;
+        position: relative;
+        justify-self: center;
+    }
+    form label{
+        margin-left: 2.5%;
+        font-weight: 500;
+        font-family: roboto;
+        word-spacing: 1vw;
+        letter-spacing: 0.5vw;
+    }
+    @font-face {
+        font-family: roboto;
+        src: url(/fonts/Roboto/Roboto-Regular.ttf);
+    }
+   </style>
+
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+        const loginErrorMsg = document.getElementById("login-error-msg");
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const username = loginForm.username.value;
+            const password = loginForm.password.value;
+
+            if (username === "9246176885" && password === "1958") {
+                location.href="/index.html";
+                return false;
+            }
+            else{
+                location.reload();
+            }
+        })
+    </script>
+
+    <!-------------------------------------------- desktop version redirect ------------------------------------------>
+    <script>
+        var usrAgent = navigator.userAgent;
+                function detectMobile() 
+        {
+            if(usrAgent.match(/Mobile/i))
+            {
+                return "Mobile";
+            }
+        }
+
+        var isMobile = detectMobile();
+
+        if(isMobile)
+        {
+            window.open = "/index.html";
+        }
+        else
+        {
+            window.location = "/index-com.html";
+        }
+    </script>

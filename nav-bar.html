@@ -1,0 +1,148 @@
+<nav translate="no">
+    <div style="display: flex; align-items:center;" onclick="openNav()" ><li class="fa-solid fa-bars" ></li>&nbsp; <label for="logo">MY Store</label></div>
+    <div><i class="fa-solid fa-house" onclick="parent.location='/index.html' "></i> <i class="fa-solid fa-barcode" onclick=" parent.location='/scanner.html' "></i></div>
+</nav>
+<!-- <div id="search-header" translate="no">
+    <form method="post" id="searchbar-container" autocomplete="off" autocorrect="off" spellcheck="false" target="_self" action="/">
+        <a onclick="openNav()"><li class="fa-solid fa-bars"></li></a><input type="text" placeholder="search here" name="searchinput" id="search-input" required /><button id="search" type="submit" value="Login"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+</div> -->
+<script src="/java scripts/search-suggestions.js"></script>
+<script src="/java scripts/search-engine.js"></script>
+
+
+<div id="overlay" translate="no">
+    <a id="overlay-close" onclick="closeNav()"></a>
+    <div id="menu" class="my-menu">
+        <!-- <img src="/nav-head.jpeg" alt="M>Y Brand" /> -->
+        <div id="menu-header">
+            <button><li class="material-icons">account_circle</li>&nbsp; My Account</button>
+            <button><li class="material-icons">shopping_cart</li>&nbsp; My Cart</button>
+        </div>
+        <details>
+            <summary>Item Categories 1</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 2</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 3</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 4</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <hr style="width:100%; border-top:1vw solid lightgray;">
+        <details>
+            <summary>Item Categories 5</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 6</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 7</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 8</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 9</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <hr style="width:100%; border-top:1vw solid lightgray;">
+        <details>
+            <summary>Item Categories 10</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 11</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 12</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+        <details>
+            <summary>Item Categories 13</summary>
+            <button>item name 1 here</button>
+            <button>item name 2 here</button>
+            <button>item name 3 here</button>
+            <button>item name 4 here</button>
+            <button>item name 5 here</button>
+        </details>
+
+        <hr style="width:100%; border-top:1vw solid lightgray;">
+        
+        <a><i class="fa-brands fa-facebook"></i>&nbsp Follow on Facebook</a>
+        <a><i class="fa-brands fa-twitter-square"></i>&nbsp Follow on Twitter</a>
+        <a><i class="fa-brands fa-instagram-square"></i>&nbsp; Follow on Instagram</a>
+        <a><i class="fa-brands fa-telegram"></i>&nbsp; Follow on Telegram</a>
+        <a><i class="fa-brands fa-youtube-square"></i>&nbsp Follow on Youtube</a>
+
+        <hr style="width:100%; border-top:1vw solid lightgray;">
+        
+        <a><i class="material-icons">assignment</i>&nbsp Terms & Conditions</a>
+        <a><i class="material-icons">help</i>&nbsp; FAQ'S & Tutorials</a>
+        <a><i class="material-icons">turned_in</i>&nbsp Privacy Policy</a>
+        <a><i class="material-icons">live_help</i>&nbsp Help Center</a>
+        <a><i class="material-icons">android</i>&nbsp About App</a>
+        
+        <img src="/nav-head.jpeg" id="shareBtn" />
+    </div>
+</div>
+

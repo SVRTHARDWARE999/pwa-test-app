@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "svrthardware.com",
+    "sha256_cert_fingerprints": [
+      "10:3F:24:33:CD:51:2D:FA:AB:CF:62:A6:CA:62:2D:2F:EC:7B:68:23:85:5A:19:BA:03:30:0E:DD:B6:3E:C1:3B"
+    ]
+  }
+}]

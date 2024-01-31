@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="assets/svrt-logo.png">
+  <meta name="viewport" content= "width=device-width, initial-scale=1 user-scalable=no">
+  <meta name="Author" content="KRISH | SOFTWARE ENGINEER">
+  <meta name="Keywords" content="SVRT, HARDWARE , HOUSE , HOME , HOLD , ARTICALS , ARTICELS , WHOLESALE , RETAIL , MANUFACTURING , AGENT , AP , TELENGANA , KERALA , TAMILNADU , GOA , SOUTH , INDIA">
+  <meta name="Description" content="SVRT HARDWARE&trade; Manufacturing agent of all types of hardware items for your home.Available all types of household articals of your construction need's.Visit our website now.">
+  <title>SVRT HARDWARE &trade; | Download app</title>
+ </head>
+ <body>
+	<nav>
+      <a href="svrthardware.html"><label class="logo"><font color="4285F4">s</font><font color="#DB4437">v</font><font color="#F4B400">r</font><font color="#0F9D58">t</font>&nbsp;<font color="#6666cc">hardware</font><font class="ml3">.com&nbsp;&nbsp;</font></label></a>
+      <ul>
+      <li><a href="svrthardware.html">Home</a></li>
+	  <li><a href="contact-us.html">Contact us</a></li>
+      <li><a href="visit-store.html">Visit Store</a></li>
+	  <li><a class="active" href="">Download App</a></li>
+      </ul>
+      </nav>
+      <section></section>
+ </body>
+ </html>
+
+<style type="text/css">
+	body{
+		margin:auto;
+		overflow-x:auto;
+		background-color:#eaeded;
+		background-attachment:fixed;
+	}
+</style>
+
+<style>//**NAVIGATION_BAR__aresponsive **//
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+nav{
+  background:#fff;
+  top:0px;
+  left:0px;
+  height: 5vw;
+  width:100%;
+  border-bottom:0.25vw solid ;
+  border-image: url('assets/header border.jpg')60;
+}
+label.logo{
+  color: white;
+  font-size: 4vw;
+  float: left;
+  text-transform:uppercase;
+  padding-left:0.9vw;
+  font-weight: bold;
+  font-family:calibri;
+  cursor:pointer;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  font-family:calibri;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #000000;
+  font-size: 1.5vw;
+  padding: 0.4vw 1.2vw;
+  border-radius: 3px;
+  font-family:calibri;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  transition: 0.8s;
+  text-decoration:none;
+  font-weight:bold;
+  color:#ffffff;
+  background-image: url('assets/header border.jpg');
+  background-size:contain;
+}
+a{
+ text-decoration:none;
+ font-weight:bold;
+ font-family:calibri;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.ml3{
+ font-family:calibri;
+ font-size:1.5vw;
+ font-weight:bold;
+ color:#330000;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 1250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 450
+  });
+</script>
+
+
+
+
+
+

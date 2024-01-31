@@ -1,0 +1,284 @@
+{
+  "ok": true,
+  "data": {
+    "settingsVersion": "2-38-0",
+    "propertyName": "Admin",
+    "branding": {
+      "whitelabeled": true,
+      "text": "🛒 SVRT HARDWARE"
+    },
+    "widget": {
+      "type": "inline",
+      "version": 33,
+      "language": "en",
+      "minimized": {
+        "desktop": {
+          "type": "round"
+        },
+        "mobile": {
+          "type": "round"
+        }
+      },
+      "maximized": {
+        "desktop": {
+          "height": 520,
+          "width": 350
+        }
+      },
+      "bubble": {
+        "type": "image",
+        "config": {
+          "image": {
+            "type": "gallery",
+            "content": "168"
+          },
+          "height": 79,
+          "width": 124,
+          "zIndex": 1,
+          "rotate": 0,
+          "offsetX": 0,
+          "offsetY": 30
+        }
+      },
+      "theme": {
+        "header": {
+          "text": "#000000",
+          "background": "#ffe6b3"
+        },
+        "agent": {
+          "messageText": "#000000",
+          "messageBackground": "#ffe6b3"
+        },
+        "visitor": {
+          "messageText": "#ffe6b3",
+          "messageBackground": "#000000"
+        }
+      },
+      "notification": {
+        "all": {
+          "estimatedWaitTime": true,
+          "sound": true,
+          "agentTyping": true,
+          "visitorTyping": true,
+          "tab": true
+        },
+        "desktop": {
+          "preview": true
+        },
+        "mobile": {
+          "preview": true
+        }
+      },
+      "behavior": {
+        "click": "max"
+      },
+      "visibility": {
+        "all": {
+          "showWhenOffline": false
+        },
+        "desktop": {
+          "position": "br",
+          "show": true
+        },
+        "mobile": {
+          "position": "br",
+          "show": true
+        }
+      },
+      "features": {
+        "emoji": true,
+        "uploads": true,
+        "rating": true,
+        "transcript": false
+      },
+      "components": {
+        "liveChat": true,
+        "kb": false,
+        "webrtc": true
+      },
+      "scheduler": {
+        "enabled": false
+      },
+      "states": {
+        "online": {
+          "header": [
+            {
+              "id": "heading:nUOYuBg1YX",
+              "type": "heading",
+              "content": {
+                "value": "Hi there 👋",
+                "alignment": "left"
+              }
+            },
+            {
+              "id": "text:tXPyXnvSPY",
+              "type": "text",
+              "content": {
+                "value": "Welcome to 🛒 SVRT HARDWARE If You Need help? Chat Now With us We are always happy to help you",
+                "alignment": "left"
+              }
+            }
+          ],
+          "body": [
+            {
+              "id": "chat:F5U6vhCBx1",
+              "type": "chat",
+              "content": {
+                "buttonText": "New Conversation",
+                "inputPlaceholder": "Type here and press enter.."
+              }
+            },
+            {
+              "id": "pc:__Z02PH1RT",
+              "type": "previous-conversations",
+              "content": {}
+            }
+          ],
+          "minimizedText": "Online"
+        },
+        "away": {
+          "header": [
+            {
+              "id": "heading:7aikq5vpBg",
+              "type": "heading",
+              "content": {
+                "value": "Hi there 👋",
+                "alignment": "left"
+              }
+            }
+          ],
+          "body": [
+            {
+              "id": "chat:AF1oa4iViY",
+              "type": "chat",
+              "content": {
+                "buttonText": "New Conversation",
+                "inputPlaceholder": "Type here and press enter.."
+              }
+            }
+          ],
+          "minimizedText": "Away"
+        },
+        "offline": {
+          "header": [
+            {
+              "id": "text:SXt1kTNlMG",
+              "type": "text",
+              "content": {
+                "value": "Please fill out the form below and we will get back to you as soon as possible.",
+                "alignment": "center"
+              }
+            }
+          ],
+          "body": [
+            {
+              "id": "form:TrvgzehrO-",
+              "type": "form",
+              "content": {
+                "fields": [
+                  {
+                    "label": "Name",
+                    "required": true,
+                    "type": "text",
+                    "context": "name"
+                  },
+                  {
+                    "label": "Email",
+                    "required": true,
+                    "type": "text",
+                    "context": "email",
+                    "format": "email"
+                  },
+                  {
+                    "label": "Message",
+                    "required": true,
+                    "type": "textarea"
+                  }
+                ]
+              }
+            }
+          ],
+          "minimizedText": "Send message"
+        },
+        "prechat": {
+          "header": [
+            {
+              "id": "logo:HpdolNVVnN",
+              "type": "logo",
+              "content": {
+                "alignment": "center",
+                "image": {
+                  "type": "file",
+                  "content": "6216568aa34c24564127d2ae/var/logo/RySON9mhMM.png"
+                }
+              }
+            },
+            {
+              "id": "text:IOvPGrPsGd",
+              "type": "text",
+              "content": {
+                "value": "To Chat With us please fill below details",
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "heading:0T_BDFeyS2",
+              "type": "heading",
+              "content": {
+                "value": "Please Fill Details",
+                "alignment": "center"
+              }
+            }
+          ],
+          "body": [
+            {
+              "id": "form:9OJobl2s8h",
+              "type": "form",
+              "content": {
+                "fields": [
+                  {
+                    "label": "Name",
+                    "required": true,
+                    "type": "text",
+                    "context": "name"
+                  },
+                  {
+                    "label": "Phone",
+                    "required": true,
+                    "type": "text",
+                    "context": "phone",
+                    "format": "phone"
+                  },
+                  {
+                    "label": "Email",
+                    "required": true,
+                    "type": "text",
+                    "context": "email",
+                    "format": "email"
+                  },
+                  {
+                    "label": "GSTIN Number",
+                    "required": true,
+                    "type": "text"
+                  },
+                  {
+                    "label": "Business Type",
+                    "required": true,
+                    "type": "radio",
+                    "options": [
+                      "Manufacturing / Industrialist",
+                      "Distributor / Marketer"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "handlers": {
+            "form": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="assets/svrt-logo.png" />
+  <meta name="viewport" content= "width=device-width, initial-scale=1 user-scalable=no" />
+  <meta name="Author" content="KRISH | SOFTWARE ENGINEER" />
+  <meta name="Keywords" content="SVRT, HARDWARE , HOUSE , HOME , HOLD , ARTICALS , ARTICELS , WHOLESALE , RETAIL , MANUFACTURING , AGENT , AP , TELENGANA , KERALA , TAMILNADU , GOA , SOUTH , INDIA" />
+  <meta name="Description" content="SVRT HARDWARE&trade; Manufacturing agent of all types of hardware items for your home.Available all types of household articals of your construction need's.Visit our website now." />
+  <title>SVRT HARDWARE</title>
+  <link href="" rel="canonical" />
+  <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://pxxym1jhrp0iyqbmboz3cw-on.drv.tw/swiperJS/swiper-bundle.min.css"/>
+
+ </head>
+ <body>
+	<nav>
+      <a href="index.html"><label class="logo"><font color="4285F4">s</font><font color="#DB4437">v</font><font color="#F4B400">r</font><font color="#0F9D58">t</font>&nbsp;<font color="#6666cc">hardware</font><font class="ml3">.com&nbsp;&nbsp;</font></label></a>
+      <ul>
+      <li><a class="active" href="">Home</a></li>
+	  <li><a href="contact-us.html">Contact us</a></li>
+      <li><a href="visit-store.html">Visit Store</a></li>
+	  <li><a href="download-app.html">Download App</a></li>
+      </ul>
+      </nav>
+      <section></section>
+
+
+	<!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/main-banners/1.jpg"></div>
+        <div class="swiper-slide"><img src="assets/main-banners/1.jpg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+			<b class="product-flex">
+				<span class="products">
+					<p>this is items 1 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex">
+				<span class="products">
+					<p>this is items 2 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+
+			<b class="product-flex">
+				<span class="products">
+					<p>this is items 3 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex">
+				<span class="products">
+					<p>this is items 4 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 5 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 6 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 7 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 8 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 9 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 10 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 11 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+			<b class="product-flex-gen">
+				<span class="products">
+					<p>this is items 12 and a descriptions <button>&nbsp;>&nbsp;</button></p>
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+					<img src="assets/images/disp.jpg" width="2976" height="2976" border="0" alt="">
+				</span>
+			</b>
+
+
+
+
+	<div style="width:100%; height:1vw; margin-top:65%;"></div>
+	<footer>
+			<div class="flex-box">
+				<img src="assets/svrt-logo.png">
+				<p>
+
+					SVRT HARDWARE&trade; / plot no : 25 & 26 / new kaleshwara rao market<br>
+					beside : BSNL telecome office / south face / graddha boma center<br>
+					one-town street / vijayawada ( 520001 ) / andhra pradesh / india<br>
+					<font size="" color="#fc6b85">note : all colors logo's / icon's and slogan's are belongs to the </font><br>
+					<font size="" color="#fc6b85">SVRT HARDWARE and all copyrights recived.donot try to copy</font><br>
+					<font size="" color="#fc6b85">any of the color's / logo's / icon's and colors.incase if copied  leagle actions will taken on you by indian government 🟥</font><br>
+					<font size="4.95vw" color="#ffdaa2">SVRT POLYMERS LLC &nbsp;|&nbsp; 2000 - 2021 all &copy;  rights recived</font>
+					<font size="4.95vw" color="#ffdaa2">Last updated on : 2:35pm / 26-01-2022</font>
+
+				</p>
+
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2762086748203!2d80.61181121486433!3d16.51214758860862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef255f54f1c5%3A0x609f79e859dbb49a!2sSVRT%20HARDWARE!5e0!3m2!1sen!2sin!4v1633504036529!5m2!1sen!2sin" style="width:25.5%; height:auto; margin-left:1vw;"></iframe>
+			</div>
+			<a href="#top"><button>Go to TOP ▲</button><a>
+		</footer>
+
+			
+				
+
+
+ </body>
+ </html>
+
+<style type="text/css">
+	body{
+		margin:auto;
+		overflow-x:hidden;
+		background-color:#eaeded;
+		background-attachment:fixed;
+	}
+	html{
+		-ms-overflow-style:none;
+		scrollbar-width:none;
+	}
+	html::-webkit-scrollbar{
+		display:none;
+	}
+	.product-flex{
+		width:21.4%;
+		height:auto;
+		position:relative;
+		margin:0.5%;
+		background-color:#fff;
+		border-radius:0px;
+		margin-top:-18vw;
+		z-index:9;
+		padding:1.3vw;
+		float:left;
+	}
+	.products img{
+		width:48%;
+		height:auto;
+		position:relative;
+		padding:2px;
+		background:;
+		justify-content:;
+		float:left;
+	}
+	.products p{
+	 font-family:calibri;
+	 font-weight:bold;
+	 font-size:1.25vw;
+	 margin-top:-0.15vw;
+	 text-transform:capitalize;
+	 padding-left:4px;
+	}
+	.products button{
+		border:none;
+		text-decoration:none;
+		font-weight:bold;
+		font-family:arial;
+		border-radius:100px;
+		padding:0.4vw;
+		color:#ffffff;
+		background-color:#6666ff;
+		font-size:1.3vw;
+	}
+	.product-flex-gen{
+		width:21.4%;
+		height:auto;
+		position:relative;
+		margin:0.5%;
+		background-color:#fff;
+		border-radius:0px;
+		z-index:9;
+		padding:1.3vw;
+		float:left;
+		}
+		footer{
+		width:100%;
+		height:auto;
+		bottom:0;
+		position:relative;
+		padding:1%;
+		padding-top:1.5%;
+		background-color:#000000;
+		border-top:0.25vw solid ;
+		border-image: url('assets/header border.jpg')60;
+		align-items:center;
+	}
+	footer img{
+		width:25%;
+		height:auto;
+		padding:2%;
+		background-color:#fff;
+		border-radius:35px;
+		pointer-events:none;
+		}
+	footer button{
+		width:100%;
+		height:5.5vw;
+		margin-top:1.8vw;
+		margin-left:-1%;
+		margin-bottom:-1.3%;
+		padding-top:0.5vw;
+		border:none;
+		font-family:sans-serif;
+		font-weight:bold;
+		font-size:2vw;
+		text-align:center;
+		color:#fff;
+		background-color:#006b9f;
+		text-decoration:none;
+		cursor:pointer;
+	}
+	.flex-box{
+	 display:flex;
+	}
+	.flex-box p{
+	 width:40%;
+	 height:auto;
+	 color:#fff;
+	 padding-left:1%;
+	 padding-right:1.5%;
+	 background:;
+	 border-right:3px solid #fff;
+	 font-family:sans-serif;
+	 font-weight:bold;
+	 font-size:1.2vw;
+	 line-height:1.5em;
+	 text-transform:capitalize;
+	}
+</style>
+
+<style>//**NAVIGATION_BAR__aresponsive **//
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+nav{
+  background:#fff;
+  top:0px;
+  left:0px;
+  height: 5vw;
+  width:100%;
+  border-bottom:0.25vw solid ;
+  border-image: url('assets/header border.jpg')60;
+}
+label.logo{
+  color: white;
+  font-size: 4vw;
+  float: left;
+  text-transform:uppercase;
+  padding-left:0.9vw;
+  font-weight: bold;
+  font-family:calibri;
+  cursor:pointer;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  font-family:calibri;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #000000;
+  font-size: 1.5vw;
+  padding: 0.4vw 1.2vw;
+  border-radius: 3px;
+  font-family:calibri;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  transition: 0.8s;
+  text-decoration:none;
+  font-weight:bold;
+  color:#ffffff;
+  background-image: url('assets/header border.jpg');
+  background-size:contain;
+}
+a{
+ text-decoration:none;
+ font-weight:bold;
+ font-family:calibri;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.ml3{
+ font-family:calibri;
+ font-size:1.5vw;
+ font-weight:bold;
+ color:#330000;
+}
+</style>
+
+<!-- Demo styles -->
+    <style>
+      .swiper {
+        width: 100%;
+        height: auto;
+		margin-top:0.5%;
+		z-index:1;
+		}
+      .swiper-slide {
+        width:100%;
+		height:auto;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+	  .swiper-button-next{
+		position:;
+		margin-top:-10.8%;
+		color:#000000;
+		float:right;
+		padding:0.5vw;
+		font-size:4vw;
+		font-weight:bold;
+		text-shadow:0px 4px #ffcc00;
+	  }
+	  .swiper-button-prev{
+	  position:;
+	  margin-top:-10.8%;
+	  color:#000000;
+	  float:left;
+	  padding:0.5vw;
+	  font-size:4vw;
+	  font-weight:bold;
+	  text-shadow:4px 0px #ffcc00;
+	  }
+    </style>
+
+
+<!-- Swiper JS -->
+    <script src="https://pxxym1jhrp0iyqbmboz3cw-on.drv.tw/swiperJS/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+		loop:true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2800,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 1250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 450
+  });
+</script>
+
+
+
+
+
+
