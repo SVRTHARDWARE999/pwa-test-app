@@ -469,15 +469,12 @@ color: #9e3601;
         position: relative;
         align-self: center;
         margin: 5% auto auto auto;
-        font-family: roboto;
+        font-family: goldman;
         line-height: 1.5em;
         word-spacing: 0.7vw;
         text-transform: capitalize;
         color: #000;
         background: #ffffff;
-        padding: 2% 0% 2% 0%;
-        font-weight: 500;
-        border-radius: 0;
     }
     table td{
         padding:1%;
