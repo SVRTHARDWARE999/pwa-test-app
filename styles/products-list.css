@@ -1,9 +1,9 @@
 body{
     margin: auto;
     background-color:#f8f8f8;
-    user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 }
 :root{
     --theme-color:#010a25;
@@ -45,9 +45,9 @@ a:link{
     line-height: 1.3em;
     overflow: hidden;
     text-transform: uppercase;
-    font-family: goldman , arial,sans-serif;
+    font-family: roboto;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0% 0.5% 0% 0%;
 }
 .container b p{
@@ -129,7 +129,7 @@ input::placeholder{
         overflow: hidden;
         width: 100vw;
         height: 100vh;
-        background-image: url('/landscape.png');
+        background-image: url('landscape.png');
         background-position: center;
         background-size: 55%;
         background-repeat: no-repeat;
