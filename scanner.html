@@ -1,15 +1,44 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Barcode Scanner</title>
-    <!-- Include the QuaggaJS library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
-    <script src="./java scripts/barcode.js"></script>
+    <!-- include the library -->
+    <script src="https://unpkg.com/html5-qrcode@latest"></script>
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <meta charset="UTF-8">
+	<meta name="viewport" content= "width=device-width, initial-scale=1, user-scalable=no" />
 </head>
 <body>
-    <!-- Create a scanner element to display the video stream -->
-    <div id="scanner" style="width: 100%; height: auto;"></div>
-    <!-- Include the Javascript code from the previous message -->
-    
+    <div id="scanner">
+        <h3>Scan a barcode to open an HTML page</h3>
+        <video id="video"></video>
+        <div id="result"></div>
+    </div>
+    <script>
+        // initialize the scanner
+        let scanner = new Html5Qrcode("video");
+
+        // start scanning and handle the result
+        scanner.start({ fps: 10, qrbox: 250 }, function (code) {
+            // stop the scanner
+            scanner.stop();
+
+            // display the result
+            document.getElementById("result").innerHTML = "Scanned code: " + code;
+
+            // open the HTML page in a new tab
+            window.open(code, "_blank");
+        }, function (error) {
+            // handle the error
+            document.getElementById("result").innerHTML = "Error: " + error;
+        });
+    </script>
+    <style>
+        video{
+            width: 100%;
+            height: auto;
+            border: 2% solid #00b49f;
+            aspect-ratio: 1/1;
+        }
+    </style>
+
 </body>
 </html>
