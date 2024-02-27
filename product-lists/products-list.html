@@ -6,22 +6,24 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="swiperJS/swiper-bundle.min.css"/> 
      <!-- java scripts -->
-	<script src="java scripts/page loader/page-loader-jquary.min.js"></script>
-    <script src="java scripts/disable-long-press.js"></script>
-	<script src="java scripts/page loader/pageloader-timeout.js"></script>
+	<script src="../java scripts/page loader/page-loader-jquary.min.js"></script>
+    <script src="../java scripts/disable-long-press.js"></script>
+	<script src="../java scripts/page loader/pageloader-timeout.js"></script>
+    <script src="../java scripts/mrp.js"></script>
 	<link rel="stylesheet" href="styles/page-loader.css">
 	<meta charset="UTF-8">
     <!-- adding base to all sources -->
     <base href="../">
     <!-- adding all css styles -->
 	<link rel="icon" type="image/png" href="assets/svrt-logo.png" />
-    <link rel="stylesheet" href="styles/fonts awesome/css/all.css" />
-    <link rel="stylesheet" href="styles/products-list.css">
-    <link rel="stylesheet" href="style/fonts.css">
-    <link rel="stylesheet" href="styles/fonts awesome/css/all.css" />
-    <link rel="stylesheet" href="styles/fonts awesome/css/fontawesome.css"/>
+    <link rel="stylesheet" href="../styles/fonts awesome/css/all.css" />
+    <link rel="stylesheet" href="../styles/products-list.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../styles/fonts awesome/css/all.css" />
+    <link rel="stylesheet" href="../styles/fonts awesome/css/fontawesome.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="styles/nav-bar.css">
+    <link rel="stylesheet" href="../styles/nav-bar.css">
+    <link rel="stylesheet" href="../styles/page-loader.css">
     <!-- Adding social media & Sgare api tags -->
 	<meta name="viewport" content= "width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="Author" content="KRISH | SOFTWARE ENGINEER" />
@@ -42,7 +44,7 @@
 	<meta property="og:url" content="" />
     <meta property="og:type" content="website"/>
 </head>
-<body>
+<body onload="mrp()">
 
     <div class="loader-container">
 		<div class="loader"></div>
@@ -175,7 +177,7 @@
                         5 in 1 multi-user soap dish oval with tooth accessories holder un breakable by shiva world shiva 06
                     </a>
                     <p>
-                        MRP :  ₹90 inclusive GST <br>
+                        MRP :  <span id="t-ubc-01"></span> inclusive GST <br>
                         Pack Type : 2pcs Box pack <br>
                         Available in : 
                         <font  style="color: rgba(0, 0, 0, 0.164); font-size: 1.3em; -webkit-text-stroke: 1px;">▰</font> 
@@ -197,7 +199,7 @@
                         jumbo corner shelf un breakable for multipurpose by shiva world shiva 15
                     </a>
                     <p>
-                        MRP :  ₹160 inclusive GST <br>
+                        MRP :  <span id="ubc-01"></span> inclusive GST <br>
                         Pack Type : 2pcs Box pack <br>
                         Available in : 
                         <font  style="color: rgba(0, 0, 0, 0.164); font-size: 1.3em; -webkit-text-stroke: 1px;">▰</font> 

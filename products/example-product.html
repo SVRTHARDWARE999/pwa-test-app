@@ -10,6 +10,7 @@
 	<script src="java scripts/page loader/page-loader-jquary.min.js"></script>
     <script src="java scripts/disable-long-press.js"></script>
 	<script src="java scripts/page loader/pageloader-timeout.js"></script>
+	<script src="java scripts/mrp.js"></script>
 	<link rel="stylesheet" href="styles/page-loader.css">
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="assets/svrt-favicon.png" />
@@ -37,7 +38,7 @@
 	<mata property="og:description" content="Shop no 25 & 26 / 1st floor new klr market / onetown / vijayawada / ap / india" />
 	<meta property="og:url" content="" />
 </head>
-<body>
+<body onload="mrp()">
 
 	<div class="loader-container">
 		<div class="loader"></div>
@@ -57,7 +58,7 @@
 	<div class="rating-container">
 		<a class="rating" translate="no">
 			<p>MRP</p>
-			₹160 | inclusive GST
+			<span id="ubc-01"></span> | inclusive GST
 		</a>
 		<!-- <button><a href="#price">₹ 160</a></button> -->
 	</div>
@@ -111,7 +112,7 @@
 		</tr>
 		<tr>
 			<td>MRP</td>
-			<td translate="no"> RS -/ ₹160 inclusive GST</td>
+			<td translate="no"> RS -/ <span id="tubc-01"></span> inclusive GST</td>
 		</tr>
 		<tr>
 			<td>Box Contents</td>
