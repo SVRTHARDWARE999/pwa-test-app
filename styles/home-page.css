@@ -65,8 +65,8 @@ html::-webkit-scrollbar{
 .container{
 width:auto;
 height:auto;
+padding: 0 0 4% 0;
 position: relative;
-padding: 1.5%;
 margin: 0 0 3.5% 0;
 background: #ffffff;
 z-index:1;
@@ -74,23 +74,28 @@ z-index:1;
 .container b{
     display: flex;
     position: relative;
+    padding: 0 2.5% 0 1%;
     font-family: goldman,potti-sreeramulu;
     font-weight: 550;
     align-items: center;
-    padding: 0% 3% 0% 1%;
     justify-content: space-between;
     font-size: 4.5vw;
+    text-align: start;
+}
+.container a{
+    background: #fff;
+}
+.container a p{
+    margin: 0;
 }
 .items img{
 width: 100%;
 height: auto;
-border-radius: 4vw;
 }
 .items a p{
     display: -webkit-box;
     overflow: hidden;
     margin-top: auto;
-    padding: 0% 0% 0% 3%;
     font-family: roboto,lohithi;
     text-transform: capitalize;
     font-size: 3.7vw;
@@ -99,26 +104,41 @@ border-radius: 4vw;
     -webkit-box-orient: vertical;
 }
 #viewall{
+    text-align: center;
     background-color: rgb(0, 123, 255);
-    padding: 5%;
-    width: 20vw;
-    font-size: 4vw;
+    padding: 8%;
+    width: 10vw;
     display: inline-block;
     position: relative;
     font-family: roboto;
     font-weight: 500;
-    border-radius: 1vw;
+    border-radius: 2vw;
     color: #ffffff;
 }
 .items{
     display: grid;
     grid-template-columns: 48% 48%;
-    grid-gap: 0% 2%;
+    grid-gap: 2% 1%;
     position: relative;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     align-self: center;
     justify-self: center;
+}
+.container .mrp{
+    color: gray;
+    font-size: 3vw;
+}
+.mrp span:last-child{
+    color: darkcyan;
+    font-style: oblique;
+}
+.mrp span:first-child{
+    background-color: green;
+    color: #fff;
+    padding: 3%;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 .fadeswipecontainer{
     background: #ffffff;
@@ -199,7 +219,7 @@ position: relative;
 @media only screen and (orientation:landscape) {
 #land { visibility: visible; }
 #port { display:none; }
-body{background-color: rgb(255,230,179); overflow: hidden;}
+body{background-color: rgb(255, 255, 255); overflow: hidden;}
 }
 
 /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */

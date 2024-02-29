@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="styles/nav-bar.css">
     <script src="java scripts/page loader/page-loader-jquary.min.js"></script>
     <script src="java scripts/page loader/pageloader-timeout.js"></script>
+    <script src="java scripts/mrp.js"></script>
     <link rel="stylesheet" href="styles/page-loader.css">
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="assets/svrt-favicon.png" />
@@ -45,7 +46,7 @@
 	<meta property="og:image:height" content="500"/>	
 </head>
 
-<body>
+<body onload="mrp()">
     <div class="loader-container">
         <div class="loader"></div>
     </div>
@@ -84,18 +85,18 @@
                 <!-- Items Start Here-->
                 <div class="container">
                     
-                    <b><p>Unbreakable Soap Dishes</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall">View all <i class="fa-solid fa-arrow-right-long"></i></a></p></b>
+                    <b><p>Unbreakable Soap Dishes</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall"><i class="fa-solid fa-arrow-right-long"></i></a></p></b>
                     <span class="items">
-                            <a href="products/example-product.html"><img src="assets/images/product-backdrop.jpg" /><p>UB single soap dish by shiva world shiva-01</p></a>
-                            <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB double soap dish by shiva world shiva-04</p></a>
-                            <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB double soap dish by shiva world shiva-03</p></a>
-                            <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB multiuser 3-in-1 single soap dish by shiva world shiva-51</p></a>
+                            <a href="products/example-product.html"><img src="assets/images/product-backdrop.jpg" /><p>UB single soap dish by shiva world shiva-01</p><p class="mrp"><span>mrp</span> <span id="ubc-01"></span> | inclusive GST</p></a>
+                            <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB double soap dish by shiva world shiva-04</p><p class="mrp"><span>mrp</span> <span id="tubc-01"></span> | inclusive GST</p></a>
+                            <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB double soap dish by shiva world shiva-03</p><p class="mrp"><span>mrp</span> <span id="ubc-01">₹1,999</span> | inclusive GST</p></a>
+                            <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB multiuser 3-in-1 single soap dish by shiva world shiva-51</p><p class="mrp"><span>mrp</span> <span id="ubc-01">₹29,999</span> | inclusive GST</p></a>
                     </span>
                 </div>
 
                 <div class="container">
 
-                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall">View all <i class="fa-solid fa-arrow-right-long"></i></a></p></b>
+                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall"><i class="fa-solid fa-arrow-right-long"></i></a></p></b>
                     <span class="items">
                         <a><img src="assets/images/product-backdrop-1.jpg" /><p>this is item 1 description goes here</p></a>
                         <a><img src="assets/images/product-backdrop-1.jpg" /><p>this is item 2 description goes here</p></a>
@@ -106,7 +107,7 @@
 
                 <div class="container">
 
-                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall">View all <i class="fa-solid fa-arrow-right-long"></i></a></p></b>
+                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall"><i class="fa-solid fa-arrow-right-long"></i></a></p></b>
                     <span class="items">
                         <a><img src="assets/images/Slide1.JPG" /><p>this is item 1 description goes here</p></a>
                         <a><img src="assets/images/Slide2.JPG" /><p>this is item 2 description goes here</p></a>
@@ -159,7 +160,7 @@
                 <!-- Items Start Here-->
                 <div class="container">
                     
-                    <b><p>Unbreakable Soap Dishes</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall">View all <i class="fa-solid fa-arrow-right-long"></i></a></p></b>
+                    <b><p>Unbreakable Soap Dishes</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall"><i class="fa-solid fa-arrow-right-long"></i></a></p></b>
                     <span class="items">
                             <a href="products/example-product.html"><img src="assets/images/product-backdrop.jpg" /><p>UB single soap dish by shiva world shiva-01</p></a>
                             <a href=""><img src="assets/images/product-backdrop.jpg" /><p>UB double soap dish by shiva world shiva-04</p></a>
@@ -170,7 +171,7 @@
 
                 <div class="container">
 
-                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall">View all <i class="fa-solid fa-arrow-right-long"></i></a></p></b>
+                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall"><i class="fa-solid fa-arrow-right-long"></i></a></p></b>
                     <span class="items">
                         <a><img src="assets/images/product-backdrop-1.jpg" /><p>this is item 1 description goes here</p></a>
                         <a><img src="assets/images/product-backdrop-1.jpg" /><p>this is item 2 description goes here</p></a>
@@ -181,7 +182,7 @@
 
                 <div class="container">
 
-                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall">View all <i class="fa-solid fa-arrow-right-long"></i></a></p></b>
+                    <b><p>Example Goes Title Here</p> <p translate="no"><a href="product-lists/products-list.html" id="viewall"><i class="fa-solid fa-arrow-right-long"></i></a></p></b>
                     <span class="items">
                         <a><img src="assets/images/Slide1.JPG" /><p>this is item 1 description goes here</p></a>
                         <a><img src="assets/images/Slide2.JPG" /><p>this is item 2 description goes here</p></a>
@@ -330,7 +331,8 @@
     };
     </script>
 
-    <script>
+    <!-- redirect by detecting android or browser -->
+    <!-- <script>
         var usrAgent = navigator.userAgent;
                 function detectMobile() 
         {
@@ -350,7 +352,7 @@
         {
             window.location = "./index-com.html";
         }
-    </script>
+    </script> -->
     
 
     <script>
