@@ -13,8 +13,8 @@
 	<script src="java scripts/mrp.js"></script>
 	<link rel="stylesheet" href="styles/stb-loader.css">
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/png" href="assets/qr-scan.gif" />
-    <link rel="shortcut icon" type="image/png" href="assets/qr-scan.gif" />
+	<link rel="icon" type="image/png" href="assets/qr-scan-png-300px.gif" />
+    <link rel="shortcut icon" type="image/png" href="assets/qr-scan-png-300px.gif" />
 	<link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/fonts awesome/css/all.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -52,7 +52,7 @@
 	<!------------------------------- Products slider swiper ------------------------------>
 	<div class="swiper mySwiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide"><div class="swiper-zoom-container"><img src="assets/stb1.jpeg"></div></div>
+            <div class="swiper-slide"><div class="swiper-zoom-container"><img src="assets/stb1.jpeg"></div></div>
 			<div class="swiper-slide"><div class="swiper-zoom-container"><img src="assets/stb2.jpeg"></div></div>
 			<div class="swiper-slide"><div class="swiper-zoom-container"><img src="assets/stb5.jpeg"></div></div>
 			<div class="swiper-slide"><div class="swiper-zoom-container"><img src="assets/stb3.jpeg"></div></div>
@@ -129,18 +129,18 @@
     document.querySelector('#share')
     .addEventListener('click', event => {
 
-        // Fallback, Tries to use API only
-        // if navigator.share function is
-        // available
+        // Fetch the title of the current webpage
+        const pageTitle = document.title;
+        ///// share API /////
         if (navigator.share) {
             navigator.share({
 
                 // Title that occurs over
-                title: 'I am so interested to share this listing of which i got by scanning by smart board by yashoda industries & tech LLC',
+                title: pageTitle,
                 //Text Message
-                text:'I am so interested to share this listing of which i got by scanning by smart board by yashoda industries & tech LLC',
+                text: pageTitle,
                 // URL to share
-                url: '/pwa-test-app/products/stb'
+                url: window.location.href
             }).then(() => {
                 console.log('Thanks for sharing!');
             }).catch(err => {
