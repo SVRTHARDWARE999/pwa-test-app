@@ -21,9 +21,9 @@
           "height": 14.43,
           "depth": 28.01
         },
-        "warrantyInformation": "1 month warranty",
         "shippingInformation": "Ships in 1 month",
         "availabilityStatus": "Low Stock",
+        "warrantyInformation": "1 month warranty",
         "reviews": [
           {
             "rating": 2,
@@ -1789,7 +1789,7 @@
           "createdAt": "2024-05-23T08:56:21.620Z",
           "updatedAt": "2024-05-23T08:56:21.620Z",
           "barcode": "3325493172934",
-          "qrCode": "https://dummyjson.com/public/qr-code.png"
+          "qrCode": "https://dummyjson.com/public/qir-code.png"
         },
         "images": [
           "https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"
@@ -1799,5 +1799,5 @@
     ],
     "total": 194,
     "skip": 0,
-    "limit": 30
+    "limit": null
   }
