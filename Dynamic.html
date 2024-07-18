@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=none">
+    <title>Dynamic products page</title>
 </head>
 <body>
      
@@ -996,7 +996,7 @@
     	width:100%;
         height:auto;
     	margin:auto;
-        background:#ffc73a;
+        background:#d9d9d9;
     }
     body::-webkit-scrollbar{
         display: none;
@@ -1006,7 +1006,9 @@
         height:auto;
         display:flex;
         flex-wrap:wrap;
-        justify-content:center;
+        justify-content:space-evenly;
+        position: relative;
+        align-self: flex-start;
     }
     .product-container{
         background:#ffffff;
