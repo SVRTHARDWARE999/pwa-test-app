@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Dynamic product detail page</title>
+</head>
+<body>
+
+    <div class="product-detail">
+        <div class="product-media"></div>
+        <div class="product-data"></div>
+    </div>
+
+    
+</body>
+</html>
+
+<style>
+    body{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        overflow-x: hidden;
+        background: #d9d9d9;
+    }
+    .product-detail{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        background: #fff;
+
+    }
+    .product-detail div{
+        width: 49%;
+        height: 40vw;
+        background-color: aquamarine;
+    }
+    @media (min-width:300px){
+
+        .product-detail div{
+            width: 100%;
+            margin: 1% 0 1% 0;
+        }
+
+    }
+    @media (min-width:900px){
+
+    .product-detail div{
+        width: 48%;
+    }
+    .product-detail{
+        gap: 0.5%;
+    }
+
+}
+
+</style>
