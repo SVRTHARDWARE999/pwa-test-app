@@ -493,9 +493,27 @@ color: #9e3601;
     table td:nth-last-child(odd){
         padding-left: 2.5%;
     }
+
+    @media (min-width:700px){
+        .product-flex-box{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            justify-items: center;
+            align-items: center;
+        }
+        .product-flex-box div{
+            width: 48%;
+            height: auto;
+            background: #fff;
+            font-size: 15px;
+        }
+    }
     /* ----------------------------screen orientation-------------------------------------- */
     
-    @media only screen and (orientation:landscape){
+    /* @media only screen and (orientation:landscape){
         body{
             display: none;
             background: var(--theme-color);
@@ -505,7 +523,7 @@ color: #9e3601;
             background-size: 55%;
             background-position: center;
         }
-    }
+    } */
 
     /* --------------------------- google translator style important ---------------------- */
 

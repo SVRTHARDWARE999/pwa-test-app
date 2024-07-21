@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Dynamic product detail page</title>
+    <link rel="stylesheet" href="./swiperJS/swiper-bundle.min.css">
 </head>
 <body>
 
     <div class="product-detail">
-        <div class="product-media"></div>
-        <div class="product-data"></div>
+        <div class="product-media">
+            <!------------------------------- Products slider swiper ------------------------------>
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/71-IheP5+BL._SL1500_.jpg"></div></div>
+					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/A11wodkXOjL._SL1500_.jpg"></div></div>
+					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/71AinLIR5vL._SL1500_.jpg"></div></div>
+					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/71STmyAxTEL._SL1500_.jpg"></div></div>
+					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/A1QPJogcZ+L._SL1500_.jpg"></div></div>
+					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/91+vbNCGajL._SL1500_.jpg"></div></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+        </div>
+        <div class="product-data">
+
+        </div>
     </div>
 
     
@@ -36,9 +52,10 @@
     }
     .product-detail div{
         width: 49%;
-        height: 40vw;
+        height: auto;
         background-color: aquamarine;
     }
+
     @media (min-width:300px){
 
         .product-detail div{
@@ -50,7 +67,16 @@
     @media (min-width:900px){
 
     .product-detail div{
-        width: 48%;
+        height: auto;
+    }
+    .product-detail div:first-child{
+        width: 40%;
+    }
+    .swiper{
+        width: 40%;
+    }
+    .product-detail div:last-child{
+        width: 58%;
     }
     .product-detail{
         gap: 0.5%;
@@ -58,4 +84,69 @@
 
 }
 
+/*-------------------SWIPER STYLE---------------*/
+.swiper {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position:absolute;
+    background: #ffffff;
+    padding: 2% 0 3% 0;
+    }
+    .swiper-slide {
+    width:100%;
+    height:auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    }
+    .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    }
+    .swiper-pagination{
+        --swiper-pagination-bullet-inactive-color: #ffe6b3;
+        margin: 7% auto -2% auto !important;
+        position: relative;
+    }
 </style>
+
+<!-- Swiper JS -->
+<script src="swiperJS/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+	zoom:true,
+	spaceBetween: 30,
+	loop:false,
+	centeredSlides: true,
+	autoplay: {
+	  delay: 2800,
+	  disableOnInteraction: true,
+	},
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: false,
+	  type:"progressbar",
+	},
+	navigation: {
+	  nextEl: ".swiper-button-next",
+	  prevEl: ".swiper-button-prev",
+	},
+  });
+</script>
