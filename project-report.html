@@ -18,31 +18,18 @@
 
     <!---------------------------- products catalouge ----------------------->
     <div class="catalouge">
-        <img src="startup-project/startup-project_1.jpg" alt="project-report">
-    </div>
-
-    <div class="catalouge">
-        <img src="startup-project/startup-project_2.jpg" alt="project-report" >
-    </div>
-
-    <div class="catalouge">
-        <img src="startup-project/startup-project_3.jpg" alt="project-report" >
-    </div>
-
-    <div class="catalouge">
-        <img src="startup-project/startup-project_4.jpg" alt="project-report" >
-    </div>
-
-    <div class="catalouge">
-        <img src="startup-project/startup-project_5.jpg" alt="project-report" >
-    </div>
-
-    <div class="catalouge">
-        <img src="startup-project/startup-project_6.jpg" alt="project-report" >
-    </div>
-
-    <div class="catalouge">
-        <img src="startup-project/startup-project_7.jpg" alt="project-report" >
+        <img src="./jyothi_industries/Slide1.JPG" alt="jyothi_industries_page_1">
+        <img src="./jyothi_industries/Slide2.JPG" alt="jyothi_industries_page_2">
+        <img src="./jyothi_industries/Slide3.JPG" alt="jyothi_industries_page_3">
+        <img src="./jyothi_industries/Slide4.JPG" alt="jyothi_industries_page_4">
+        <img src="./jyothi_industries/Slide5.JPG" alt="jyothi_industries_page_5">
+        <img src="./jyothi_industries/Slide6.JPG" alt="jyothi_industries_page_6">
+        <img src="./jyothi_industries/Slide7.JPG" alt="jyothi_industries_page_7">
+        <img src="./jyothi_industries/Slide8.JPG" alt="jyothi_industries_page_8">
+        <img src="./jyothi_industries/Slide9.JPG" alt="jyothi_industries_page_9">
+        <img src="./jyothi_industries/Slide10.JPG" alt="jyothi_industries_page_10">
+        <img src="./jyothi_industries/Slide11.JPG" alt="jyothi_industries_page_11">
+        <img src="./jyothi_industries/Slide12.JPG" alt="jyothi_industries_page_12">
     </div>
 
      <!-- button -->
@@ -58,7 +45,7 @@
         width: 100%;
         height: auto;
         margin: auto;
-        background: rgb(231, 231, 231);
+        background: rgb(206, 206, 206);
         overflow-x: hidden;
         scrollbar-width: none;
         scroll-margin: 0;
@@ -66,17 +53,18 @@
     .catalouge{
         width: 100%;
         height: auto;
-        font-family: roboto , sans-serif , Arial, Helvetica ;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
-        justify-self: center;
-        background: #fff;
-        margin: 2% 0%;
-        padding:2% 0;
+    }
+    @media (min-width:100px){
+        .catalouge img{
+            width: 100%;
+            height: auto;
+            margin: 5px 0 5px 0;
+        }
+    }
+    @media (min-width:700px){
+        .catalogue img{
+            visibility: hidden;
+        }
     }
     .catalouge h1{
         font-weight: bold;
@@ -99,11 +87,6 @@
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 1.5%;
-    }
-    .catalouge img{
-        width: 98%;
-        height: auto;
-        position: relative;                                                                                   
     }
     .banner{
         width: 100%;
