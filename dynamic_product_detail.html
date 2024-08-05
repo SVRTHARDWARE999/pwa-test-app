@@ -1,16 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Dynamic product detail page</title>
-    <link rel="stylesheet" href="./swiperJS/swiper-bundle.min.css">
+	<title translate="no">DRIZZLE Corner Shelf Super Clear | Unbreakable Transparent Shelves | Multipurpose Use (Size 7 inch, 9 inch, 11 inch) - Set of 1 (3 Pieces)</title>
+    <link href="" rel="canonical" />
+	<base href="../">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="swiperJS/swiper-bundle.min.css"/> 
+    <!-- java scripts -->
+	<script src="java scripts/page loader/page-loader-jquary.min.js"></script>
+    <script src="java scripts/disable-long-press.js"></script>
+	<script src="java scripts/page loader/pageloader-timeout.js"></script>
+	<script src="java scripts/mrp.js"></script>
+	<link rel="stylesheet" href="styles/page-loader.css">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="assets/svrt-favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/svrt-favicon.png" />
+	<link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/fonts awesome/css/all.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="styles/nav-bar.css">
+    <link rel="stylesheet" href="styles/products.css">
+	<meta name="viewport" content= "width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="Author" content="KRISH | SOFTWARE ENGINEER" />
+	<meta name="Keywords" content="SVRT, HARDWARE , HOUSE , HOME , HOLD , ARTICALS , ARTICELS , WHOLESALE , RETAIL , MANUFACTURING , AGENT , AP , TELENGANA , KERALA , TAMILNADU , GOA , SOUTH , INDIA" />
+	<meta name="Description" content="SVRT HARDWARE Manufacturing agent of all types of hardware items for your home.Available all types of household articals of your construction need's.Visit our website now." />
+	<meta name="theme-color" content="#010a25"/>
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#010a25" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#010a25" />
+    <meta property="fb:app_id" content="375110101089943">
+    <meta property="og:image" content="https://dsm01pap002files.storage.live.com/y4mNQG37bO-5KKsQY4KbIPhFpN1NmUdJkVUbYH3dvvhJJnkOQjNKItunPuUnII8c8NtA6Jd73VBaWnUGR7SG_P15WXQKvwCGJgGKrkBM4xVeRw9-X3fipoCztmxu_hQpFA5MF8jGteWwh-gTGTUo3hssOaeoMmJR9lFVrv6D5tMpbhbz3C7BjAlRGxWVw90InAI?width=2720&height=1664&cropmode=none" />
+	<meta property="og:image:width" content="2720"/>
+	<meta property="og:image:height" content="1664"/>
+	<meta property="og:image" content="https://dsm01pap002files.storage.live.com/y4mP3wjkQl4na4PMEt6gbf4ZvO9IgW7nGaonptS3XhkuUuCj6T00rOEcgD1rW4LqaZ6qnFFYISq0YqYrZvIXocZK4G7uieplQ_d2p6B04aFXXagtAE_cPrFFhrNHJ5ekFa4eHWnGHM9WYsPa4mBN4e8k1ycMQE7eoW3OkXRJQzrqu_rBagg4XqFth7UJ-oYOi7A?width=1920&height=1920&cropmode=none" />
+	<meta property="og:image:width" content="500"/>
+	<meta property="og:image:height" content="500"/>
+	<meta property="og:title" content="SVRT HARDWARE.com AP largest wholesale store available all types of home & bath accessories"/>
+	<mata property="og:description" content="Shop no 25 & 26 / 1st floor new klr market / onetown / vijayawada / ap / india" />
+	<meta property="og:url" content="" />
 </head>
-<body>
+<body onload="mrp()">
 
-    <div class="product-detail">
-        <div class="product-media">
-            <!------------------------------- Products slider swiper ------------------------------>
+	<div class="loader-container">
+		<div class="loader"></div>
+	</div>
+
+	<!------------------------------------------ nav bar header -------------------------------->
+	<!-- <div class="navigation"></div>
+	<script src="java scripts/nav-bar.js"></script> -->
+    <!---------------------------------------------- nav bar END ------------------------------>
+
+	<div class="product-flex-box">
+	<div>
+		<p class="store-link" translate="no">m.y forever</p>
+		
+		<p class="title" id="dubc-01"></p>
+		<div class="pricing">
+            <div>₹999</div>
+            <div><s>MRP ₹1499</s></div>
+            <div class="store-price">🏪 ₹699</div>
+            <p>-75% off</p>
+        </div>
+
+		<!------------------------------- Products slider swiper ------------------------------>
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><div class="swiper-zoom-container"><img src="https://m.media-amazon.com/images/I/71-IheP5+BL._SL1500_.jpg"></div></div>
@@ -22,108 +73,109 @@
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
-        </div>
-        <div class="product-data">
 
-        </div>
-    </div>
+		<!----------------------------------------------------------- share & Add To Cart Buttons --------------------------------------->
 
-    
+		<div class="buttons" translate="no">
+			<button id="share"><i class="fa-solid fa-square-share-nodes"></i> share this product</button>
+			<button id="cart"><i class="fa-brands fa-maxcdn"></i> Buy on Meeshow</button>
+		</div>
+	</div>
+		<!----------------------------------------------------------------- product details ----------------------------------------------->
+
+		<div>
+			<table>
+				<tr>
+					<td>item name</td>
+					<td>corner shelf clear</td>
+				</tr>
+				<tr>
+					<td>purpose</td>
+					<td>multi purpose <br> living room / kitchen / balcony / bathroom</td>
+				</tr>
+				<tr>
+					<td>item brand</td>
+					<td translate="no">m.y forever</td>
+				</tr>
+				<tr>
+					<td>item code</td>
+					<td>shiva - 03</td>
+				</tr>
+				<tr>
+					<td>item size</td>
+					<td>7" , 9" , 11" ( inches )</td>
+				</tr>
+				<tr id="price">
+					<td>item weight</td>
+					<td>250 grams</td>
+				</tr>
+				<tr>
+					<td>MRP</td>
+					<td translate="no"> RS -/ <span id="tubc-01"></span> inclusive GST</td>
+				</tr>
+				<tr>
+					<td>Box Contents</td>
+					<td>1 set corner Shelf <br>
+						1 set screw's <br>
+						1 N scratch card 
+					</td>
+				</tr>
+				<tr>
+					<td>BPLID</td>
+					<td translate="no"> WP.90<sup>+</sup> / MOQ.250P / FP.79<sup>+</sup></td>
+				</tr>
+				<tr>
+					<td>country of origin</td>
+					<td> made in india</td>
+				</tr>
+				<tr>
+					<td>warranty</td>
+					<td> replacement for only manufacturing defeactes</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div>Related products</div>
+
+	<!-- <div class="footer"></div>
+	<script src="java scripts/footer.js"></script> -->
+
 </body>
 </html>
 
+
 <style>
-    body{
+    .pricing{
         width: 100%;
         height: auto;
-        margin: 0;
-        overflow-x: hidden;
-        background: #d9d9d9;
+        background: white;
+        font-family: roboto;
+        font-size: 16px;
+        color: rgb(80, 80, 80);
+        margin: 0 0 0 1%;
+        display: inline-block;
     }
-    .product-detail{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        background: #fff;
-
+    .pricing div:first-child{
+        font-size: 24px;
+        color: brown;
+        margin:0 0 0 1%;
     }
-    .product-detail div{
-        width: 49%;
-        height: auto;
-        background-color: aquamarine;
+    .pricing .store-price{
+        font-size: 18px;
+        color: green;
     }
-
-    @media (min-width:300px){
-
-        .product-detail div{
-            width: 100%;
-            margin: 1% 0 1% 0;
-        }
-
-    }
-    @media (min-width:900px){
-
-    .product-detail div{
-        height: auto;
-    }
-    .product-detail div:first-child{
-        width: 40%;
-    }
-    .swiper{
-        width: 40%;
-    }
-    .product-detail div:last-child{
-        width: 58%;
-    }
-    .product-detail{
-        gap: 0.5%;
-    }
-
-}
-
-/*-------------------SWIPER STYLE---------------*/
-.swiper {
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    position:absolute;
-    background: #ffffff;
-    padding: 2% 0 3% 0;
-    }
-    .swiper-slide {
-    width:100%;
-    height:auto;
-    aspect-ratio: 1;
-    overflow: hidden;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    }
-    .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    }
-    .swiper-pagination{
-        --swiper-pagination-bullet-inactive-color: #ffe6b3;
-        margin: 7% auto -2% auto !important;
-        position: relative;
+    .pricing p{
+        float: right;
+        background: rgb(255, 225, 185);
+        color: brown;
+        font-size: 20px;
+        padding: 5%;
+        border-radius: 5px;
+        margin: -15% 4% 0 0;
     }
 </style>
+
 
 <!-- Swiper JS -->
 <script src="swiperJS/swiper-bundle.min.js"></script>
