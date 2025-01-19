@@ -97,9 +97,9 @@ footer button:hover{
     align-self: center;
 }
 .product{
-    width: 49.75%;
+    width: 49.9%;
     height: auto;
-    margin: 0 0 0.1% 0;
+    margin: 0 0 0.3% 0;
     display: inline-flexbox;
     position: relative;
     color: black;
