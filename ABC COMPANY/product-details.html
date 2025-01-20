@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/app-bar.css">
+    <link rel="stylesheet" href="styles/product-details.css">
+    <link rel="stylesheet" href="swiperJS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="swiperJS/swiper-bundle.min.js"></script>
+    <script src="javascripts/disable-longpress.js"></script>
+    <title>Product Details Page</title>
+</head>
+<body>
+    <main>
+
+        <header></header>
+        <script src="javascripts/app-bar.js"></script>
+        <div class="product-description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aliquam ratione maiores ad non cupiditate corporis praesentium aliquid, in sint harum similique voluptas, repudiandae error nesciunt. Natus earum assumenda iste
+        </div>
+        
+        <!-------------------------------- Swiper  Banners ----------------------------->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="swiper-container"></div></div>
+                <div class="swiper-slide"><div class="swiper-container"></div></div>
+                <div class="swiper-slide"><div class="swiper-container"></div></div>
+                <div class="swiper-slide"><div class="swiper-container"></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Product Pricing Details -->
+         <div class="product-price">
+            <div><b>₹599</b><b>MRP ₹1499</b></div>
+            <div>-75% off</div>
+         </div>
+
+         <!-- Product Detailed Table -->
+
+        <table>
+            <tr>
+                <td>item name</td>
+                <td>corner shelf clear</td>
+            </tr>
+            <tr>
+                <td>purpose</td>
+                <td>multi purpose <br> living room / kitchen / balcony / bathroom</td>
+            </tr>
+            <tr>
+                <td>item brand</td>
+                <td translate="no">m.y forever</td>
+            </tr>
+            <tr>
+                <td>item code</td>
+                <td>shiva - 03</td>
+            </tr>
+            <tr>
+                <td>item size</td>
+                <td>7" , 9" , 11" ( inches )</td>
+            </tr>
+            <tr id="price">
+                <td>item weight</td>
+                <td>250 grams</td>
+            </tr>
+            <tr>
+                <td>MRP</td>
+                <td translate="no"> RS -/ <span id="tubc-01"></span> inclusive GST</td>
+            </tr>
+            <tr>
+                <td>Box Contents</td>
+                <td>1 set corner Shelf <br>
+                    1 set screw's <br>
+                    1 N scratch card 
+                </td>
+            </tr>
+            <tr>
+                <td>BPLID</td>
+                <td translate="no"> WP.90<sup>+</sup> / MOQ.250P / FP.79<sup>+</sup></td>
+            </tr>
+            <tr>
+                <td>country of origin</td>
+                <td> made in india</td>
+            </tr>
+            <tr>
+                <td>warranty</td>
+                <td> replacement for only manufacturing defeactes</td>
+            </tr>
+        </table>
+
+        <footer></footer>
+        <script src="javascripts/bottom-bar.js"></script>
+    </main>
+    <style>
+        .swiper {
+          width: 100%;
+          height: auto;
+          margin: 0% 0 1% 0;
+        }
+        .swiper-wrapper {
+          width: 100%;
+          height: auto;
+        }
+        .swiper-slide {
+          width: 100%;
+          height: auto;
+        }
+        .swiper-container {
+          width: 100%;
+          aspect-ratio: 1/1;
+          background-color: #ffb8b8;
+        }
+        .autoplay-progress {
+         position: absolute;
+         right: 16px;
+         bottom: 16px;
+         z-index: 10;
+         width: 48px;
+         height: 48px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: bold;
+         color: var(--swiper-theme-color);
+        }
+        .autoplay-progress svg {
+         --progress: 0;
+         position: absolute;
+         left: 0;
+         top: 0px;
+         z-index: 10;
+         width: 100%;
+         height: 100%;
+         stroke-width: 4px;
+         stroke: var(--swiper-theme-color);
+         fill: none;
+         stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+         stroke-dasharray: 125.6;
+         transform: rotate(-90deg);
+        }
+    </style>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 8,
+          loop:true,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
+    
+</body>
+</html>

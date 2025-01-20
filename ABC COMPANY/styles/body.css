@@ -3,9 +3,10 @@ body{
     width: 100%;
     height: auto;
     margin: 0;
-    background: rgb(220, 220, 220);
+    background-color: rgb(241, 241, 241);
     overflow-x: hidden;
     scrollbar-width: none;
+    user-select: none;
 }
 html{
     scrollbar-width: none;
