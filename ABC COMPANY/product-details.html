@@ -35,7 +35,7 @@
 
         <!-- Product Pricing Details -->
          <div class="product-price">
-            <div><b>₹599</b><b>MRP ₹1499</b></div>
+            <div><b class="sale-price">₹5,99,999<span>+ 18% GST</span></b><b class="mrp">MRP <span>₹1499</span></b><a>📦MOQ <span>25 NO's</span> </a></div>
             <div>-75% off</div>
          </div>
 
@@ -95,6 +95,14 @@
         <script src="javascripts/bottom-bar.js"></script>
     </main>
     <style>
+        .loading-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        }
+    </style>
+    <style>
         .swiper {
           width: 100%;
           height: auto;
@@ -146,12 +154,12 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
           spaceBetween: 8,
-          loop:true,
+          loop:false,
           centeredSlides: true,
-          autoplay: {
-            delay: 2000,
-            disableOnInteraction: true,
-          },
+        //   autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: true,
+        //   },
           pagination: {
             el: ".swiper-pagination",
             clickable: false,

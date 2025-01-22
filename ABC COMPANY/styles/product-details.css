@@ -6,6 +6,7 @@
     background-color: rgb(255, 255, 255);
     padding: 1.5%;
     font-size: 14px;
+    font-weight: bold;
     line-height: 1.3em;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,25 +26,47 @@
 .product-price div:first-child{
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     padding: 1.5%;
 }
-.product-price div:first-child b:first-child{
-    font-size: 27px;
-    font-weight: bold;
-    color: darkgreen;
-    letter-spacing: 0.5vw;
+.product-price .sale-price{
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 550;
+    color: rgb(53, 53, 53);
 }
-.product-price div:first-child b:last-child{
-    font-size: 11px;
-    color: grey;
+
+.product-price .sale-price span{
+    font-size: 7px;
+    font-weight: 400;
+    color: #787878;
+}
+.product-price .mrp{
+    font-size: 13px;
+    color: gray;
     letter-spacing: 0.2vw;
-    font-weight: 300;
+    font-weight: bold;
+}
+.product-price .mrp span{
+    
     text-decoration-line: line-through;
+}
+.product-price div:first-child a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: gray;
+    font-weight: bold;
+}
+.product-price div:first-child a span{
+    color: rgb(0, 124, 124);
 }
 .product-price div:last-child{
     padding: 1.5%;
     font-size: 18px;
-    color: maroon;
+    color: rgb(163, 0, 0);
     font-weight: bolder;
     letter-spacing: 0.3vw;
 }

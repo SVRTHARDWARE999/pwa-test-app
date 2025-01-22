@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="swiperJS/swiper-bundle.min.js"></script>
     <script src="javascripts/disable-longpress.js"></script>
+     <!-- Dynamic Products API from Google Sheets -->
+     <script src="javascripts/products-api.js"></script>
     <title>ABC COMPANY</title>
 </head>
 <body>
@@ -31,15 +33,12 @@
                 <div class="swiper-slide"><div class="swiper-container"></div></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="autoplay-progress">
-                <svg viewBox="0 0 48 48">
-                  <circle cx="24" cy="24" r="20"></circle>
-                </svg>
-                <span></span>
             </div>
         </div>
+
+        <!------------------------------ Dynamic Products Flex Starts Here  --------->
         <div class="dynamic-products">
-            <button class="product" onclick="window.location.href='product-details.html'">
+            <!-- <button class="product" onclick="window.location.href='product-details.html'">
                 <img src="https://m.media-amazon.com/images/I/71N4hshhfNL._SX569_.jpg" alt="" srcset="">
                 <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi vel assumenda error esse. Corporis, in doloribus? Molestias accusamus, laborum in maxime voluptas vel odio culpa earum modi error aspernatur sunt.</p>
                 <p class="product-price"><a><span>₹899</span><span>MRP ₹1999</span></a><a>-75% off</a></p>
@@ -118,9 +117,11 @@
                 <img src="https://opsg-img-cdn-gl.heytapimg.com/epb/202411/03/eAKM40kmDtMYxKWL.png?x-amz-process=image/format,webp/quality,Q_80" alt="" srcset="">
                 <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi vel assumenda error esse. Corporis, in doloribus? Molestias accusamus, laborum in maxime voluptas vel odio culpa earum modi error aspernatur sunt.</p>
                 <p class="product-price"><a><span>₹599</span><span>MRP ₹1499</span></a><a>-75% off</a></p>
-            </button>
+            </button> -->
             
         </div>
+
+        <div class="spacer"></div>
         <footer>
         </footer>
         <script src="javascripts/bottom-bar.js"></script>
@@ -162,6 +163,17 @@
     });
     </script>
 
+    
+    <style>
+        .loading-image {
+        width: 100%;
+        height: 25vw;
+        object-fit: contain;
+        object-position: center;
+        margin: 0 auto;
+        }
+    </style>
+    
     <style>
         .swiper {
           width: 100%;
@@ -181,33 +193,22 @@
           aspect-ratio: 16/9;
           background-color: #ffb8b8;
         }
-        .autoplay-progress {
-         position: absolute;
-         right: 16px;
-         bottom: 16px;
-         z-index: 10;
-         width: 48px;
-         height: 48px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         font-weight: bold;
-         color: var(--swiper-theme-color);
+        
+        /* Customize the pagination bullets */
+        .swiper-pagination-bullet {
+            width: 5vw; /* Adjust the size */
+            height: 0.5vh; /* Adjust the size */
+            background-color: #e3e3e3; /* Default color */
+            opacity: 1; /* Ensure full opacity */
+            border-radius: 1vw; /* Make bullets round */
+            margin: 0.5vw; /* Adjust spacing between bullets */
         }
-        .autoplay-progress svg {
-         --progress: 0;
-         position: absolute;
-         left: 0;
-         top: 0px;
-         z-index: 10;
-         width: 100%;
-         height: 100%;
-         stroke-width: 4px;
-         stroke: var(--swiper-theme-color);
-         fill: none;
-         stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-         stroke-dasharray: 125.6;
-         transform: rotate(-90deg);
+
+        /* Customize the active pagination bullet */
+        .swiper-pagination-bullet-active {
+            background-color: #000000; /* Active color */
+            width: 5vw; /* Adjust the size */
+            height: 0.5vh; /* Adjust the size */
         }
     </style>
     <!-- Initialize Swiper -->
@@ -229,14 +230,7 @@
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-          },
-          on: 
-          {
-            autoplayTimeLeft(s, time, progress) {
-          progressCircle.style.setProperty("--progress", 1 - progress);
-          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-            }
-            }
+          }
         });
     </script>
      
