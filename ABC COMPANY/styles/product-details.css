@@ -5,7 +5,7 @@
     height: auto;
     background-color: rgb(255, 255, 255);
     padding: 1.5%;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 1.3em;
     text-transform: capitalize;
@@ -26,6 +26,7 @@
 .product-price div:first-child{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     flex-wrap: nowrap;
     white-space: nowrap;
     padding: 1.5%;

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             shuffledData.forEach((product, index) => {
                 console.log(`Product ${index}:`, product);
                 const productTemplate = `
-                <button class="product" onclick="window.location.href='product-details.html'">
+                <button class="product" onclick="window.location.href='product-details.html?code=${product.code}'">
                 <img src="${product['image-1']}" alt="" srcset="">
                 <p class="product-description">${product.description}</p>
                 <p class="product-price"><a><span>${product.wholesale}</span><span>MRP ${product.mrp}</span></a><a>${product.discount}</a></p>
