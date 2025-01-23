@@ -3,7 +3,7 @@
     color: #000000;
 }
 .menu-button i{
-    color: #ff8f34;
+    color: var(--active-button-color);
 }
 
 /* menu style */

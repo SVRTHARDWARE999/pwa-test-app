@@ -1,51 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productsContainer = document.querySelector(".dynamic-products");
     const loadingImage = document.createElement('img');
-    loadingImage.src = 'sources/loading-animation.gif'; // Replace with the actual URL of the loading image
+    loadingImage.src = 'sources/loading-fun-1.gif'; // Replace with the actual URL of the loading image
     loadingImage.classList.add('loading-image');
 
-    productsContainer.appendChild(loadingImage);
-
     const API = "https://script.google.com/macros/s/AKfycbwG2CqkPgJDXqiqmvPZibsl4WnnOnDErXvagPpp9qkLqcCyEbP3Efy5qkujeFOwVZBZTQ/exec";
-    let allProducts = [];
-    let loadedCount = 0;
-    const loadIncrement = 10;
-    let isLoading = false;
 
     async function products() {
         try {
+            productsContainer.style.backgroundColor = 'transparent'; // Set background color to transparent
+            productsContainer.appendChild(loadingImage); // Show loading image
+
             const response = await fetch(API);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
             console.log(data); // Check the full data structure
-            allProducts = shuffleArray(data.data); // Assuming data contains a property 'data' that holds the array
-            loadMoreProducts(); // Load initial set of products
+            localStorage.setItem('cachedProducts', JSON.stringify(data.data)); // Cache the data
+            displayProducts(data.data); // Assuming data contains a property 'data' that holds the array
         } catch (err) {
             console.error("Failed to fetch API data:", err);
         } finally {
             productsContainer.removeChild(loadingImage); // Remove loading image
+            productsContainer.style.backgroundColor = ''; // Revert background color to normal
         }
     }
 
     products();
 
-    // Function to load more products
-    function loadMoreProducts() {
-        if (isLoading || loadedCount >= allProducts.length) return;
-        isLoading = true;
-        console.log(`Loading more products... Loaded count: ${loadedCount}`);
-        const nextProducts = allProducts.slice(loadedCount, loadedCount + loadIncrement);
-        displayProducts(nextProducts);
-        loadedCount += loadIncrement;
-        isLoading = false;
-    }
-
     // Displaying API Products Data in HTML template Page
     function displayProducts(data) {
         if (productsContainer) { // Check if container is not null
-            data.forEach((product, index) => {
+            const shuffledData = shuffleArray(data); // Shuffle the data array
+            shuffledData.forEach((product, index) => {
                 console.log(`Product ${index}:`, product);
                 const productTemplate = `
                 <button class="product" onclick="window.location.href='product-details.html'">
@@ -70,12 +58,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         return array;
     }
-
-    // Infinite scroll event listener
-    window.addEventListener('scroll', () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-            console.log('Scrolled to bottom, loading more products...');
-            loadMoreProducts();
-        }
-    });
 });

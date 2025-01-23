@@ -1,9 +1,15 @@
+/* ********** App Theme Color's ********************** */
+    :root{
+        --appbar-color: #f1cbff;
+        --active-button-color:#a300de;
+        --app-background:rgb(241, 241, 241);
+    }
 /* page body style */
 body{
     width: 100%;
     height: auto;
     margin: 0;
-    background-color: rgb(241, 241, 241);
+    background-color: var(--app-background);
     overflow-x: hidden;
     scrollbar-width: none;
     user-select: none;
