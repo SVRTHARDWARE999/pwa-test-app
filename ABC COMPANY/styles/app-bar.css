@@ -63,6 +63,7 @@ footer button i{
     padding: 0 0 0 2vw;
     font-size: 4vw;
     border: none;
+    outline: none;
 }
 .search-input input:hover{
     border: none;
@@ -78,5 +79,6 @@ footer button i{
     font-size: 4vw;
     cursor: pointer;
     border: none;
+    outline: none;
     -webkit-tap-highlight-color: transparent;
 }

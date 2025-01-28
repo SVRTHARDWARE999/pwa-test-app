@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productContainer = document.querySelector(".product-container"); // Ensure this matches the actual class name
+    const loadingImage = document.createElement('img');
+    loadingImage.src = 'sources/loading-fun-2.gif'; // Replace with the actual URL of the loading image
+    loadingImage.classList.add('loading-image');
+    loadingImage.style.display = 'block'; // Ensure the loading image is visible initially
 
     console.log('Product Container:', productContainer); // Log the product container to check if it is selected
 
@@ -12,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         try {
+            productContainer.appendChild(loadingImage); // Show loading image
             const response = await fetch(`https://script.google.com/macros/s/AKfycbwG2CqkPgJDXqiqmvPZibsl4WnnOnDErXvagPpp9qkLqcCyEbP3Efy5qkujeFOwVZBZTQ/exec?code=${productId}`); // Replace with actual API URL
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -21,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
             displayProducts(data);
         } catch (err) {
             console.error("Failed to fetch API data:", err);
+        } finally {
+            loadingImage.style.display = 'none'; // Hide loading image
         }
     }
 
@@ -44,10 +51,26 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-------------------------------- Swiper  Banners ----------------------------->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><div class="swiper-zoom-container"><img src="${product['image-1']}"></div></div>
-                    <div class="swiper-slide"><div class="swiper-zoom-container"><img src="${product['image-2']}"></div></div>
-                    <div class="swiper-slide"><div class="swiper-zoom-container"><img src="${product['image-3']}"></div></div>
-                    <div class="swiper-slide"><div class="swiper-zoom-container"><img src="${product['image-4']}"></div></div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="${product['image-1'] || ''}" alt="Image 1" srcset="" id="thumblain">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="${product['image-2'] || ''}" alt="Image 2" srcset="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="${product['image-3'] || ''}" alt="Image 3" srcset="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                            <img src="${product['image-4'] || ''}" alt="Image 4" srcset="">
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -59,74 +82,76 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
 
             <!-- Product Detailed Table -->
-            
-			<table>
-				<tr>
-					<td>item name</td>
-					<td>corner shelf clear</td>
-				</tr>
-				<tr>
-					<td>purpose</td>
-					<td>multi purpose <br> living room / kitchen / balcony / bathroom</td>
-				</tr>
-				<tr>
-					<td>item brand</td>
-					<td translate="no">${product.brand}</td>
-				</tr>
-				<tr>
-					<td>item code</td>
-					<td>shiva - 03</td>
-				</tr>
-				<tr>
-					<td>item size</td>
-					<td>7" , 9" , 11" ( inches )</td>
-				</tr>
-				<tr id="price">
-					<td>item weight</td>
-					<td>250 grams</td>
-				</tr>
-				<tr>
-					<td>MRP</td>
-					<td translate="no"> RS -/ <span id="tubc-01"></span> inclusive GST</td>
-				</tr>
-				<tr>
-					<td>Box Contents</td>
-					<td>1 set corner Shelf <br>
-						1 set screw's <br>
-						1 N scratch card 
-					</td>
-				</tr>
-				<tr>
-					<td>BPLID</td>
-					<td translate="no"> WP.90<sup>+</sup> / MOQ.250P / FP.79<sup>+</sup></td>
-				</tr>
-				<tr>
-					<td>country of origin</td>
-					<td> made in india</td>
-				</tr>
-				<tr>
-					<td>warranty</td>
-					<td> replacement for only manufacturing defeactes</td>
-				</tr>
-			</table>
+            <table>
+                <tr>
+                    <td>Item Name</td>
+                    <td>${product.name || 'N/A'}</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>${product.category || 'N/A'}</td>
+                </tr>
+                <tr>
+                    <td>Brand</td>
+                    <td>${product.brand || 'N/A'}</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
         `;
+
+        // Log the inner HTML to check if it is correctly set
+        console.log('Inner HTML set:', productContainer.innerHTML);
 
         // Initialize Swiper
         var swiper = new Swiper(".mySwiper", {
-            zoom:true,
+            zoom: {
+                maxRatio: 5,
+            },
             spaceBetween: 30,
-            loop:false,
+            loop: false,
             centeredSlides: true,
             pagination: {
-              el: ".swiper-pagination",
-              clickable: false,
-              type:"bullets",
+                el: ".swiper-pagination",
+                clickable: true,
+                type: "bullets",
             },
             navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
-          });
+        });
+
+        // Insert meta og:image tag
+        const thumbnailImage = document.getElementById('thumblain');
+        if (thumbnailImage) {
+            const imageUrl = thumbnailImage.src;
+            const metaOgImage = document.createElement('meta');
+            metaOgImage.setAttribute('property', 'og:image');
+            metaOgImage.content = imageUrl;
+            document.head.appendChild(metaOgImage);
+            console.log('Meta og:image set to:', imageUrl); // Log the image URL to check if it is correctly set
+            console.log('Meta tag appended to head:', metaOgImage.outerHTML); // Log the meta tag to check if it is correctly appended
+        } else {
+            console.error('Thumbnail image with ID "thumblain" not found.');
+        }
+
+        // Insert meta description tag
+        const productDescription = document.querySelector('.product-description');
+        if (productDescription) {
+            const descriptionContent = productDescription.textContent.trim();
+            const metaDescription = document.createElement('meta');
+            metaDescription.name = 'description';
+            metaDescription.content = descriptionContent;
+            document.head.appendChild(metaDescription);
+            console.log('Meta description set to:', descriptionContent); // Log the description to check if it is correctly set
+            console.log('Meta tag appended to head:', metaDescription.outerHTML); // Log the meta tag to check if it is correctly appended
+
+            // Insert text inside title tag
+            document.title = descriptionContent;
+            console.log('Title set to:', descriptionContent); // Log the title to check if it is correctly set
+        } else {
+            console.error('Product description element with class "product-description" not found.');
+        }
     }
 
     products();
