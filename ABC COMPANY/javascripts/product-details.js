@@ -146,12 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const shareButton = document.getElementById('shareButton');
         shareButton.addEventListener('click', async () => {
             const thumbnailImage = document.getElementById('thumblain');
-            const productDescription = document.querySelector('.product-description');
             const pageUrl = window.location.href;
 
-            if (thumbnailImage && productDescription) {
+            if (thumbnailImage) {
                 const imageUrl = thumbnailImage.src;
-                const descriptionContent = productDescription.textContent.trim();
 
                 if (navigator.share) {
                     try {
@@ -209,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     console.error('Web Share API is not supported in this browser.');
                 }
             } else {
-                console.error('Thumbnail image or product description not found.');
+                console.error('Thumbnail image not found.');
             }
         });
     }

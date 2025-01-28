@@ -1,3 +1,16 @@
+/* Share Button */
+
+#shareButton{
+    width: 20vw;
+    height: 5vh;
+    background-color: var(--appbar-color);
+    outline: none;
+    border: none;
+    margin: 0 5% 0 0;
+    border-radius: 2vw;
+
+}
+
 
 /* Product Description */
 .product-description{
@@ -64,7 +77,7 @@
 .product-price div:first-child a span{
     color: rgb(0, 124, 124);
 }
-.product-price div:last-child{
+.product-price .discount{
     padding: 1.5%;
     font-size: 18px;
     color: rgb(163, 0, 0);
