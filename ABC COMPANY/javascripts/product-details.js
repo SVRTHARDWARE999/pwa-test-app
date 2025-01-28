@@ -100,7 +100,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- Product Pricing Details -->
             <div class="product-price">
                 <div><b class="sale-price">${product.wholesale || 'N/A'}<span>+ ${product.gst || 'N/A'} GST</span></b><b class="mrp">MRP <span>${product.mrp || 'N/A'}</span></b><a>📦MOQ <span>${product.moq || 'N/A'} ${product.units || ''}</span> </a></div>
-                <div>${product.discount || 'No discount available'}</div>
+                <div class="discount">${product.discount || 'No discount available'}</div>
+                <!-- Share Button -->
+                <button id="shareButton"><i class="fa-solid fa-share-nodes"></i> Share</button>
             </div>
 
             <!-- Product Detailed Table -->
@@ -119,9 +121,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 </tr>
                 <!-- Add more rows as needed -->
             </table>
-
-            <!-- Share Button -->
-            <button id="shareButton">Share</button>
         `;
 
         // Initialize Swiper
@@ -156,12 +155,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if (navigator.share) {
                     try {
-                        await navigator.share({
-                            title: document.title,
-                            text: descriptionContent,
-                            url: pageUrl,
-                            files: [new File([await fetch(imageUrl).then(res => res.blob())], 'image.jpg', { type: 'image/jpeg' })]
-                        });
+                        const response = await fetch(imageUrl);
+                        const blob = await response.blob();
+                        const imageBitmap = await createImageBitmap(blob);
+
+                        // Check if the image is already in 1:1 aspect ratio
+                        if (imageBitmap.width === imageBitmap.height) {
+                            // Image is already 1:1, no need to modify
+                            const file = new File([blob], 'image.jpg', { type: 'image/jpeg' });
+
+                            await navigator.share({
+                                title: document.title,
+                                text: descriptionContent,
+                                url: pageUrl,
+                                files: [file]
+                            });
+                        } else {
+                            // Create a canvas to draw the image with a 1:1 aspect ratio and white background
+                            const canvas = document.createElement('canvas');
+                            const size = Math.max(imageBitmap.width, imageBitmap.height);
+                            const padding = size * 0.05; // 5% padding
+                            const paddedSize = size + padding * 2;
+                            canvas.width = paddedSize;
+                            canvas.height = paddedSize;
+                            const ctx = canvas.getContext('2d');
+
+                            // Fill the canvas with a white background
+                            ctx.fillStyle = 'white';
+                            ctx.fillRect(0, 0, paddedSize, paddedSize);
+
+                            // Draw the image in the center of the canvas with padding
+                            const xOffset = (paddedSize - imageBitmap.width) / 2;
+                            const yOffset = (paddedSize - imageBitmap.height) / 2;
+                            ctx.drawImage(imageBitmap, xOffset, yOffset);
+
+                            // Convert the canvas to a Blob
+                            const newBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg'));
+
+                            const file = new File([newBlob], 'image.jpg', { type: 'image/jpeg' });
+
+                            await navigator.share({
+                                title: document.title,
+                                text: descriptionContent,
+                                url: pageUrl,
+                                files: [file]
+                            });
+                        }
                         console.log('Content shared successfully');
                     } catch (error) {
                         console.error('Error sharing content:', error);
