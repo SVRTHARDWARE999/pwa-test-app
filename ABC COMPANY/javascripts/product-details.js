@@ -43,9 +43,31 @@ document.addEventListener("DOMContentLoaded", function() {
         // Assuming the data structure is { "data": [ { ... } ] }
         const product = data.data[0]; // Access the first element of the data array
 
+        // Insert meta tags dynamically
+        const imageUrl = product['image-1'] || '';
+        const descriptionContent = product.description || 'No description available';
+
+        const metaOgImage = document.createElement('meta');
+        metaOgImage.setAttribute('property', 'og:image');
+        metaOgImage.content = imageUrl;
+        document.head.appendChild(metaOgImage);
+        console.log('Meta og:image set to:', imageUrl); // Log the image URL to check if it is correctly set
+        console.log('Meta tag appended to head:', metaOgImage.outerHTML); // Log the meta tag to check if it is correctly appended
+
+        const metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        metaDescription.content = descriptionContent;
+        document.head.appendChild(metaDescription);
+        console.log('Meta description set to:', descriptionContent); // Log the description to check if it is correctly set
+        console.log('Meta tag appended to head:', metaDescription.outerHTML); // Log the meta tag to check if it is correctly appended
+
+        // Insert text inside title tag
+        document.title = descriptionContent;
+        console.log('Title set to:', descriptionContent); // Log the title to check if it is correctly set
+
         productContainer.innerHTML = `
             <div class="product-description">
-                ${product.description || 'No description available'}
+                ${descriptionContent}
             </div>
             
             <!-------------------------------- Swiper  Banners ----------------------------->
@@ -53,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-zoom-container">
-                            <img src="${product['image-1'] || ''}" alt="Image 1" srcset="" id="thumblain">
+                            <img src="${imageUrl}" alt="Image 1" srcset="" id="thumblain">
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -97,10 +119,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 </tr>
                 <!-- Add more rows as needed -->
             </table>
-        `;
 
-        // Log the inner HTML to check if it is correctly set
-        console.log('Inner HTML set:', productContainer.innerHTML);
+            <!-- Share Button -->
+            <button id="shareButton">Share</button>
+        `;
 
         // Initialize Swiper
         var swiper = new Swiper(".mySwiper", {
@@ -121,37 +143,36 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         });
 
-        // Insert meta og:image tag
-        const thumbnailImage = document.getElementById('thumblain');
-        if (thumbnailImage) {
-            const imageUrl = thumbnailImage.src;
-            const metaOgImage = document.createElement('meta');
-            metaOgImage.setAttribute('property', 'og:image');
-            metaOgImage.content = imageUrl;
-            document.head.appendChild(metaOgImage);
-            console.log('Meta og:image set to:', imageUrl); // Log the image URL to check if it is correctly set
-            console.log('Meta tag appended to head:', metaOgImage.outerHTML); // Log the meta tag to check if it is correctly appended
-        } else {
-            console.error('Thumbnail image with ID "thumblain" not found.');
-        }
+        // Share API
+        const shareButton = document.getElementById('shareButton');
+        shareButton.addEventListener('click', async () => {
+            const thumbnailImage = document.getElementById('thumblain');
+            const productDescription = document.querySelector('.product-description');
+            const pageUrl = window.location.href;
 
-        // Insert meta description tag
-        const productDescription = document.querySelector('.product-description');
-        if (productDescription) {
-            const descriptionContent = productDescription.textContent.trim();
-            const metaDescription = document.createElement('meta');
-            metaDescription.name = 'description';
-            metaDescription.content = descriptionContent;
-            document.head.appendChild(metaDescription);
-            console.log('Meta description set to:', descriptionContent); // Log the description to check if it is correctly set
-            console.log('Meta tag appended to head:', metaDescription.outerHTML); // Log the meta tag to check if it is correctly appended
+            if (thumbnailImage && productDescription) {
+                const imageUrl = thumbnailImage.src;
+                const descriptionContent = productDescription.textContent.trim();
 
-            // Insert text inside title tag
-            document.title = descriptionContent;
-            console.log('Title set to:', descriptionContent); // Log the title to check if it is correctly set
-        } else {
-            console.error('Product description element with class "product-description" not found.');
-        }
+                if (navigator.share) {
+                    try {
+                        await navigator.share({
+                            title: document.title,
+                            text: descriptionContent,
+                            url: pageUrl,
+                            files: [new File([await fetch(imageUrl).then(res => res.blob())], 'image.jpg', { type: 'image/jpeg' })]
+                        });
+                        console.log('Content shared successfully');
+                    } catch (error) {
+                        console.error('Error sharing content:', error);
+                    }
+                } else {
+                    console.error('Web Share API is not supported in this browser.');
+                }
+            } else {
+                console.error('Thumbnail image or product description not found.');
+            }
+        });
     }
 
     products();
