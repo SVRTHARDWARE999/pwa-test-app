@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const imageUrl = product['image-1'] || '';
         const descriptionContent = product.description || 'No description available';
 
+        // Store the description content in localStorage
+        localStorage.setItem('shareText', descriptionContent);
+
         const metaOgImage = document.createElement('meta');
         metaOgImage.setAttribute('property', 'og:image');
         metaOgImage.content = imageUrl;
@@ -150,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (thumbnailImage) {
                 const imageUrl = thumbnailImage.src;
+                const descriptionContent = localStorage.getItem('shareText') || 'No description available';
 
                 if (navigator.share) {
                     try {
@@ -209,6 +213,11 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 console.error('Thumbnail image not found.');
             }
+        });
+
+        // Clear localStorage when the page is closed
+        window.addEventListener('beforeunload', () => {
+            localStorage.removeItem('shareText');
         });
     }
 
