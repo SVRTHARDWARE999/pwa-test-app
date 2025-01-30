@@ -1,14 +1,22 @@
 /* Share Button */
 
 #shareButton{
-    width: 20vw;
+    width: 75vw;
     height: 5vh;
     background-color: var(--appbar-color);
     outline: none;
     border: none;
-    margin: 0 5% 0 0;
+    margin: 3%;
+    position: relative;
+    align-self: center;
+    justify-self: center;
     border-radius: 2vw;
 
+}
+#shareButton:active{
+    background-color: var(--active-button-color);
+    color: white;
+    
 }
 
 

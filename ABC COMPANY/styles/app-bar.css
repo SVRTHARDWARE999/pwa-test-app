@@ -44,6 +44,9 @@ footer button i{
     margin-top: 2%;
     -webkit-tap-highlight-color: none;
 }
+footer button:active{
+    color: var(--active-button-color);
+}
 .search-container {
     display: flex;
     align-items: center;
